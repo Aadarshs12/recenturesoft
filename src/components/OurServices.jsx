@@ -1,9 +1,119 @@
-import React from 'react'
+"use client";
+
+import React from "react";
+import { GiMouse } from "react-icons/gi";
+import Image from "next/image";
+import { TbArrowLeftFromArc } from "react-icons/tb";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/pagination";
 
 const OurServices = () => {
-  return (
-    <div>OurServices</div>
-  )
-}
+  const services = [
+    {
+      icon: "/images/software-icon.png",
+      title: "Software Development",
+      description:
+        "Get Feature-rich and scalable software solutions that speak of your business in an interactive manner.",
+    },
+    {
+      icon: "/images/web-icons.png",
+      title: "Web Development",
+      description:
+        "Get extensive website development solutions for your business from some of the most experienced coding enthusiasts.",
+    },
+    {
+      icon: "/images/mobile-icon.png",
+      title: "Mobile App Development",
+      description:
+        "Get your business a modern and interactive mobile application with multiple designs and frameworks to choose from.",
+    },
+    {
+      icon: "/images/digital-icon.png",
+      title: "Digital Marketing",
+      description:
+        "Build your website's digital marketing portfolio with excellent search engine results and greater visibility over the world wide web.",
+    },
+  ];
 
-export default OurServices
+  return (
+    <section className="forOurServices py-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col gap-3">
+          <span className="flex lg:flex-row flex-col justify-center text-base items-center gap-2 primary-color">
+            <GiMouse className="text-3xl -rotate-90" /> At Recenturesoft,
+            serving you with the best is always our motto.
+          </span>
+          <h1 className="text-6xl text-center font-bold">
+            Our <span className="primary-gradient">Services</span>
+          </h1>
+          <span className="forBorderSeperator"></span>
+
+          <div className="mt-8">
+            <Swiper
+              modules={[Autoplay, Pagination]}
+              spaceBetween={20}
+              loop={true}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: true,
+              }}
+              pagination={false}
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                  autoplay: { delay: 3000 },
+                  pagination: { clickable: true },
+                },
+                640: {
+                  slidesPerView: 1,
+                  pagination: false,
+                },
+                768: {
+                  slidesPerView: 2,
+                  pagination: false,
+                },
+                1024: {
+                  slidesPerView: 4,
+                  pagination: false,
+                },
+              }}
+              className="our-services-swiper"
+            >
+              {[...services, ...services, ...services].map((service, index) => (
+                <SwiperSlide key={index}>
+                  <div className="forServicesCard shadow-2xs flex flex-col gap-2 p-5 rounded-2xl bg-slate-100 h-full">
+                    <div className="forServiceImg flex items-center gap-2">
+                      <Image
+                        src={service.icon}
+                        alt={service.title}
+                        height={250}
+                        width={250}
+                        className="w-fit object-contain h-[50px]"
+                      />
+                      <h3 className="text-2xl font-bold text-black">
+                        {service.title}
+                      </h3>
+                    </div>
+                    <p className="text-base text-gray-700 flex-1">
+                      {service.description}
+                    </p>
+                    <button className="flex items-center gap-2 forButtonGetInTouch mt-4">
+                      Get in touch <TbArrowLeftFromArc />
+                    </button>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default OurServices;

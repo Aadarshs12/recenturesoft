@@ -108,7 +108,7 @@ const Header = () => {
                     <div className="px-8 py-10">
                       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
                         <div className="hidden lg:block lg:col-span-5">
-                          <div className="bg-[#fcecec]  p-6 rounded-3xl">
+                          <div className="bg-slate-100  p-6 rounded-3xl">
                             <Image
                               src="/images/rsoft.jpg"
                               alt="Recenturesoft Infotech"
@@ -116,7 +116,7 @@ const Header = () => {
                               height={400}
                               priority
                               quality={100}
-                              className="w-full h-48 object-cover rounded-2xl shadow-2xl border-4 border-white"
+                              className="w-full h-40 object-cover rounded-2xl shadow-2xl border-4 border-white"
                             />
                             <div className="mt-6">
                               <h3 className="text-2xl font-bold text-[#2181c2]">

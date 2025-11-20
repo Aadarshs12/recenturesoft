@@ -25,17 +25,17 @@ const Banner = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <div className="flex items-center py-5 px-2">
-              <div className="w-1/2 flex flex-col gap-3">
-                <h2 className="text-6xl font-bold primary-gradient">
+            <div className="flex lg:flex-row flex-col items-center py-5 px-2">
+              <div className="lg:w-1/2 w-full flex flex-col gap-3">
+                <h2 className="lg:text-6xl text-4xl font-bold primary-gradient">
                   Software Development
                 </h2>
-                <p className="text-lg">
+                <p className="lg:text-lg text-base">
                   Get Scalable yet unique software development solutions that
                   are both user centric and UI friendly as per your choice.
                 </p>
               </div>
-              <div className="w-1/2">
+              <div className="lg:w-1/2 w-full">
                 <Image
                   src="/images/banner-1.webp"
                   alt="Slide 1"
@@ -47,17 +47,17 @@ const Banner = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex items-center p-5">
-              <div className="w-1/2 flex flex-col gap-3">
-                <h2 className="text-6xl font-bold primary-gradient">
+            <div className="flex lg:flex-row flex-col items-center p-5">
+              <div className="lg:w-1/2 w-full flex flex-col gap-3">
+                <h2 className="lg:text-6xl text-4xl font-bold primary-gradient">
                   Mobile App Development
                 </h2>
-                <p className="text-lg">
+                <p className="lg:text-lg text-base">
                   Let your code speak for itself with AI-based mobile
                   applications and a feature-rich platform for your website.
                 </p>
               </div>
-              <div className="w-1/2">
+              <div className="lg:w-1/2 w-full">
                 <Image
                   src="/images/banner-2.png"
                   alt="Slide 2"
@@ -69,18 +69,18 @@ const Banner = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex items-center p-5">
-              <div className="w-1/2 flex flex-col gap-3">
-                <h2 className="text-6xl font-bold primary-gradient">
+            <div className="flex lg:flex-row flex-col items-center p-5">
+              <div className="lg:w-1/2 w-full flex flex-col gap-3">
+                <h2 className="lg:text-6xl text-4xl font-bold primary-gradient">
                   Ecommerce Website Development
                 </h2>
-                <p className="text-lg">
+                <p className="lg:text-lg text-base">
                   Give your online retail store a brand new look with product
                   catalogues, cart management and other features to build that
                   professional look.
                 </p>
               </div>
-              <div className="w-1/2">
+              <div className="lg:w-1/2 w-full">
                 <Image
                   src="/images/banner-3.webp"
                   alt="Slide 3"
