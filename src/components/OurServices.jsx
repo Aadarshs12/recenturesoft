@@ -44,12 +44,12 @@ const OurServices = () => {
     <section className="forOurServices py-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-3">
-          <span className="flex lg:flex-row flex-col justify-center text-base items-center gap-2 primary-color">
+          <span className="flex lg:flex-row uppercase flex-col justify-center text-base items-center gap-2 text-gray-500">
             <GiMouse className="text-3xl -rotate-90" /> At Recenturesoft,
             serving you with the best is always our motto.
           </span>
-          <h1 className="text-6xl text-center font-bold">
-            Our <span className="primary-gradient">Services</span>
+          <h1 className="text-6xl w-fit mx-auto primary-gradient text-center font-bold">
+            Our Services
           </h1>
           <span className="forBorderSeperator"></span>
 

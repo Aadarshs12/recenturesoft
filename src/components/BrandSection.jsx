@@ -5,6 +5,7 @@ import {
   TooltipTrigger,
   TooltipProvider,
 } from "@/components/ui/tooltip";
+import { GiMouse } from "react-icons/gi";
 
 export default function BrandsSection() {
   const brands = [
@@ -23,31 +24,28 @@ export default function BrandsSection() {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-white forBrandSection">
+    <section className="py-5 lg:py-12 bg-sky-100 forBrandSection">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 lg:mb-16">
-          <p className="text-sm uppercase tracking-wider text-gray-500 font-semibold mb-3">
-            What We Offer
+          <p className="text-sm uppercase flex items-center gap-2 justify-center tracking-wider text-gray-500 font-semibold mb-3">
+           <GiMouse className="text-3xl -rotate-90"/> What We Offer
           </p>
           <h2 className="text-3xl lg:text-5xl font-bold primary-gradient">
             Recenturesoft Infotech have to offer?
           </h2>
         </div>
 
-        {/* Only change: TooltipProvider + individual Tooltip for each item */}
         <TooltipProvider>
           <div className="flex brandDiv flex-wrap justify-center gap-3 max-w-6xl mx-auto">
             {brands.map((item, index) => (
               <Tooltip key={index}>
-                <TooltipTrigger
-                  className="relative h-40 w-44 card transform transition-all duration-300 hover:scale-110  hover:-translate-y-3"
-                >
+                <TooltipTrigger className="relative h-40 w-44 card transform transition-all duration-300 hover:scale-110  hover:-translate-y-3">
                   <div className="absolute inset-0 rounded-2xl"></div>
                   <div
-                    className="absolute p-3 inset-2 lg:inset-4 shaped-card bg-sky-100 hover:bg-[#fbe8e8]  rounded-xl shadow-inner overflow-hidden"
+                    className="absolute p-3 inset-2 lg:inset-4 shaped-card bg-white rounded-xl shadow-2xs overflow-hidden"
                     style={{
                       clipPath:
-                        "polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)",
+                        "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
                       transform: "rotate(90deg)",
                     }}
                   >
@@ -62,7 +60,9 @@ export default function BrandsSection() {
                 </TooltipTrigger>
 
                 <TooltipContent>
-                  <p className="secondary-color text-sm font-semibold">{item?.name}</p>
+                  <p className="secondary-color text-sm font-semibold">
+                    {item?.name}
+                  </p>
                 </TooltipContent>
               </Tooltip>
             ))}

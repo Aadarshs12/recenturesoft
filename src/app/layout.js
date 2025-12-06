@@ -1,6 +1,7 @@
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -14,17 +15,17 @@ const outfit = Outfit({
 
 export const metadata = {
   title: "Recenturesoft",
-  description: "Recenturesoft Infotech Pvt Ltd is a Leading Software Development Company in India that Offers the Best Custom Software Development, eCommerce Website Development, Mobile App Development and SEO Services.",
+  description:
+    "Recenturesoft Infotech Pvt Ltd is a Leading Software Development Company in India that Offers the Best Custom Software Development, eCommerce Website Development, Mobile App Development and SEO Services.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${outfit.variable} ${inter.variable} antialiased`}
-      >
-        <Header/>
+      <body className={`${outfit.variable} ${inter.variable} antialiased`}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

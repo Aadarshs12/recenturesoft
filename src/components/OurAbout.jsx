@@ -58,7 +58,7 @@ export default function AboutSection() {
         >
           <div className="absolute inset-0 -z-10 pointer-events-none">
             <div
-              className="h-full w-full opacity-20"
+              className="h-full w-full"
               style={{
                 backgroundImage: "url('/images/pattern-3.png')",
                 backgroundSize: "600px",
@@ -109,16 +109,22 @@ export default function AboutSection() {
             <div className="relative -z-10">
               <Image
                 style={{
-                  backgroundImage:
-                    "linear-gradient(157.5deg, rgb(95, 97, 179) 0%, rgb(95, 97, 179) 16%,rgb(115, 120, 184) 16%, rgb(115, 120, 184) 20%,rgb(135, 142, 188) 20%, rgb(135, 142, 188) 32%,rgb(155, 165, 193) 32%, rgb(155, 165, 193) 38%,rgb(175, 187, 198) 38%, rgb(175, 187, 198) 48%,rgb(195, 210, 203) 48%, rgb(195, 210, 203) 51%,rgb(215, 232, 207) 51%, rgb(215, 232, 207) 59%,rgb(235, 255, 212) 59%, rgb(235, 255, 212) 100%),linear-gradient(135deg, rgb(95, 97, 179) 0%, rgb(95, 97, 179) 16%,rgb(115, 120, 184) 16%, rgb(115, 120, 184) 20%,rgb(135, 142, 188) 20%, rgb(135, 142, 188) 32%,rgb(155, 165, 193) 32%, rgb(155, 165, 193) 38%,rgb(175, 187, 198) 38%, rgb(175, 187, 198) 48%,rgb(195, 210, 203) 48%, rgb(195, 210, 203) 51%,rgb(215, 232, 207) 51%, rgb(215, 232, 207) 59%,rgb(235, 255, 212) 59%, rgb(235, 255, 212) 100%),linear-gradient(112.5deg, rgb(95, 97, 179) 0%, rgb(95, 97, 179) 16%,rgb(115, 120, 184) 16%, rgb(115, 120, 184) 20%,rgb(135, 142, 188) 20%, rgb(135, 142, 188) 32%,rgb(155, 165, 193) 32%, rgb(155, 165, 193) 38%,rgb(175, 187, 198) 38%, rgb(175, 187, 198) 48%,rgb(195, 210, 203) 48%, rgb(195, 210, 203) 51%,rgb(215, 232, 207) 51%, rgb(215, 232, 207) 59%,rgb(235, 255, 212) 59%, rgb(235, 255, 212) 100%),linear-gradient(90deg, rgb(33,129,194),rgb(201, 243, 43)); background-blend-mode:overlay,overlay,overlay,normal;",
+                  backgroundImage: `
+        linear-gradient(157.5deg, rgb(95,97,179) 0%, rgb(95,97,179) 16%, rgb(115,120,184) 16%, rgb(115,120,184) 20%, rgb(135,142,188) 20%, rgb(135,142,188) 32%, rgb(155,165,193) 32%, rgb(155,165,193) 38%, rgb(175,187,198) 38%, rgb(175,187,198) 48%, rgb(195,210,203) 48%, rgb(195,210,203) 51%, rgb(215,232,207) 51%, rgb(215,232,207) 59%, rgb(235,255,212) 59%, rgb(235,255,212) 100%),
+        linear-gradient(135deg, rgb(95,97,179) 0%, rgb(95,97,179) 16%, rgb(115,120,184) 16%, rgb(115,120,184) 20%, rgb(135,142,188) 20%, rgb(135,142,188) 32%, rgb(155,165,193) 32%, rgb(155,165,193) 38%, rgb(175,187,198) 38%, rgb(175,187,198) 48%, rgb(195,210,203) 48%, rgb(195,210,203) 51%, rgb(215,232,207) 51%, rgb(215,232,207) 59%, rgb(235,255,212) 59%, rgb(235,255,212) 100%),
+        linear-gradient(112.5deg, rgb(95,97,179) 0%, rgb(95,97,179) 16%, rgb(115,120,184) 16%, rgb(115,120,184) 20%, rgb(135,142,188) 20%, rgb(135,142,188) 32%, rgb(155,165,193) 32%, rgb(155,165,193) 38%, rgb(175,187,198) 38%, rgb(175,187,198) 48%, rgb(195,210,203) 48%, rgb(195,210,203) 51%, rgb(215,232,207) 51%, rgb(215,232,207) 59%, rgb(235,255,212) 59%, rgb(235,255,212) 100%),
+        linear-gradient(90deg, rgb(33,129,194), rgb(201,243,43))
+      `,
+                  backgroundBlendMode: "overlay, overlay, overlay, normal",
                 }}
                 src="/images/about.png"
                 alt="About Recenturesoft Infotech"
                 width={600}
                 height={500}
-                className="w-full bg-yellow-50 p-5 object-contain h-[450px] rounded-lg "
+                className="w-full bg-yellow-50 p-5 object-contain h-[450px] rounded-lg"
                 priority
               />
+
               <div className="absolute top-16 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-cyan-400 to-purple-600 p-4 shadow-lg">
                 <Image
                   src="/images/pattern-1.png"
