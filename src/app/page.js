@@ -1,5 +1,8 @@
+import AddionalInformation from "@/components/AddionalInformation";
 import Banner from "@/components/Banner";
+import Blogs from "@/components/Blogs";
 import BrandsSection from "@/components/BrandSection";
+import ClientAndPartners from "@/components/ClientAndPartners";
 import FaqSection from "@/components/FaqSection";
 import HowItWorks from "@/components/HowItWorks";
 import OurAbout from "@/components/OurAbout";
@@ -17,6 +20,9 @@ const page = () => {
       <HowItWorks />
       <FaqSection />
       <Testimonials />
+      <AddionalInformation />
+      <ClientAndPartners />
+      <Blogs />
     </>
   );
 };

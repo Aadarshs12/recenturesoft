@@ -24,11 +24,17 @@ export default function BrandsSection() {
   ];
 
   return (
-    <section className="py-5 lg:py-12 bg-sky-100 forBrandSection">
+    <section
+      style={{
+        backgroundImage: `repeating-radial-gradient(circle at center center, transparent 0px, transparent 2px,rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 3px,transparent 3px, transparent 5px,rgba(0,0,0,0.03) 5px, rgba(0,0,0,0.03) 7px),repeating-radial-gradient(circle at center center, rgb(235,247,255) 0px, rgb(235,247,255) 9px,rgb(235,247,255) 9px, rgb(235,247,255) 21px,rgb(235,247,255) 21px, rgb(235,247,255) 31px,rgb(235,247,255) 31px, rgb(235,247,255) 40px)`,
+        backgroundSize: `20px 20px`,
+      }}
+      className="py-5 lg:py-12 forBrandSection"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 lg:mb-16">
           <p className="text-sm uppercase flex items-center gap-2 justify-center tracking-wider text-gray-500 font-semibold mb-3">
-           <GiMouse className="text-3xl -rotate-90"/> What We Offer
+            <GiMouse className="text-3xl -rotate-90" /> What We Offer
           </p>
           <h2 className="text-3xl lg:text-5xl font-bold primary-gradient">
             Recenturesoft Infotech have to offer?
@@ -39,7 +45,7 @@ export default function BrandsSection() {
           <div className="flex brandDiv flex-wrap justify-center gap-3 max-w-6xl mx-auto">
             {brands.map((item, index) => (
               <Tooltip key={index}>
-                <TooltipTrigger className="relative h-40 w-44 card transform transition-all duration-300 hover:scale-110  hover:-translate-y-3">
+                <TooltipTrigger className="relative lg:h-40 lg:w-44 h-32 w-36 card transform transition-all duration-300 hover:scale-110  hover:-translate-y-3">
                   <div className="absolute inset-0 rounded-2xl"></div>
                   <div
                     className="absolute p-3 inset-2 lg:inset-4 shaped-card bg-white rounded-xl shadow-2xs overflow-hidden"

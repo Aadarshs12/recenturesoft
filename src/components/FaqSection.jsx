@@ -12,8 +12,8 @@ const FaqSection = () => {
   return (
     <section className="forFaqBg">
       <div className="container mx-auto px-4">
-        <div className="flex items-center">
-          <div className="w-1/2 p-5 relative h-[400px]">
+        <div className="flex lg:flex-row flex-col items-center">
+          <div className="lg:w-1/2 w-full p-5 relative h-[400px]">
             <Image
               fill
               alt="FAQ"
@@ -21,7 +21,7 @@ const FaqSection = () => {
               src="/images/faq.png"
             ></Image>
           </div>
-          <div className="w-1/2 p-5">
+          <div className="lg:w-1/2 w-full p-5">
             <p className="text-sm uppercase flex items-center gap-2 tracking-wider text-gray-500 font-semibold mb-3">
               <GiMouse className="text-3xl -rotate-90" /> FAQ & Answer
             </p>

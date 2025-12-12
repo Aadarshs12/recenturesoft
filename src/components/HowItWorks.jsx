@@ -46,10 +46,10 @@ const ParallaxLayer = ({
 
 const HowItWorks = () => {
   return (
-    <section className="py-5 lg:py-8">
+    <section className="py-5 lg:py-8 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="flex">
-          <div className="w-1/2 flex flex-col gap-5 p-3">
+        <div className="flex lg:flex-row flex-col">
+          <div className="lg:w-1/2 w-full flex flex-col gap-5 p-3">
             <p className="text-sm uppercase m-0 flex items-center gap-2 tracking-wider text-gray-500 font-semibold">
               <GiMouse className="text-3xl -rotate-90" /> How it works
             </p>
@@ -105,7 +105,7 @@ const HowItWorks = () => {
               </div>
             </div>
           </div>
-          <div className="w-1/2 flex justify-center steps-one_image-inner relative p-5">
+          <div className="lg:w-1/2 w-full flex justify-center steps-one_image-inner relative p-5">
             <ParallaxLayer
               scale={1.5}
               delay={0.6}

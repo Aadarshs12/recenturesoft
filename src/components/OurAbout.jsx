@@ -173,9 +173,12 @@ export default function AboutSection() {
 
             <Link
               href="#"
-              className="inline-flex items-center gap-2 btn-gradient py-3 px-6 rounded-lg font-medium"
+              className="inline-flex transition-all duration-300 ease-in-out items-center gap-2 btn-gradient py-1 px-6 rounded-lg font-medium"
             >
-              Get our services <FaArrowRightLong />
+              Get our services{" "}
+              <span className="bg-black p-3 rounded-full -rotate-45">
+                <FaArrowRightLong />
+              </span>
             </Link>
           </div>
         </div>

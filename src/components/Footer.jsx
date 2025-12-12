@@ -21,8 +21,8 @@ const Footer = () => {
         playsInline
       />
       <div className="footer-content container mx-auto px-4">
-        <div className="flex flex-row justify-between">
-          <div className="w-1/4 flex flex-col gap-4">
+        <div className="flex flex-row flex-wrap justify-between">
+          <div className="lg:w-1/4 md:w-1/2 w-full flex flex-col gap-4">
             <div>
               <Image
                 className="w-fit mb-2"
@@ -55,7 +55,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="w-1/4 flex flex-col gap-4">
+          <div className="lg:w-1/4 md:w-1/2 w-full flex flex-col gap-4">
             <h2 className="text-2xl font-semibold primary-color">Company</h2>
             <div className="flex flex-col gap-3">
               <ul>
@@ -128,7 +128,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="w-1/4 flex flex-col gap-4">
+          <div className="lg:w-1/4 md:w-1/2 w-full flex flex-col gap-4">
             <h2 className="text-2xl font-semibold primary-color">
               Technology
             </h2>
@@ -203,7 +203,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="w-1/4 flex flex-col gap-4">
+          <div className="lg:w-1/4 md:w-1/2 w-full flex flex-col gap-4">
             <h2 className="text-2xl font-semibold primary-color">
               Services
             </h2>

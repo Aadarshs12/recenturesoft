@@ -3,7 +3,8 @@
 import React from "react";
 import { GiMouse } from "react-icons/gi";
 import Image from "next/image";
-import { TbArrowLeftFromArc } from "react-icons/tb";
+import { FaArrowRightLong } from "react-icons/fa6";
+import Link from "next/link";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -86,7 +87,13 @@ const OurServices = () => {
             >
               {[...services, ...services, ...services].map((service, index) => (
                 <SwiperSlide key={index}>
-                  <div className="forServicesCard shadow-2xs flex flex-col gap-2 p-5 rounded-2xl bg-slate-100 h-full">
+                  <div
+                    style={{
+                      backgroundImage: `repeating-radial-gradient(circle at center center, transparent 0px, transparent 2px,rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 3px,transparent 3px, transparent 5px,rgba(0,0,0,0.03) 5px, rgba(0,0,0,0.03) 7px),repeating-radial-gradient(circle at center center, rgb(235,247,255) 0px, rgb(235,247,255) 9px,rgb(235,247,255) 9px, rgb(235,247,255) 21px,rgb(235,247,255) 21px, rgb(235,247,255) 31px,rgb(235,247,255) 31px, rgb(235,247,255) 40px)`,
+                      backgroundSize: `20px 20px`,
+                    }}
+                    className="forServicesCard shadow-2xs flex flex-col gap-2 p-5 rounded-2xl h-full"
+                  >
                     <div className="forServiceImg flex items-center gap-2">
                       <Image
                         src={service.icon}
@@ -102,9 +109,15 @@ const OurServices = () => {
                     <p className="text-base text-gray-700 flex-1">
                       {service.description}
                     </p>
-                    <button className="flex items-center gap-2 forButtonGetInTouch mt-4">
-                      Get in touch <TbArrowLeftFromArc />
-                    </button>
+                    <Link
+                      href="#"
+                      className="inline-flex transition-all duration-300 ease-in-out items-center gap-2 btn-gradient py-1 px-6 rounded-lg font-medium"
+                    >
+                      Get our services{" "}
+                      <span className="bg-black p-3 rounded-full -rotate-45">
+                        <FaArrowRightLong />
+                      </span>
+                    </Link>
                   </div>
                 </SwiperSlide>
               ))}

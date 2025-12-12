@@ -49,7 +49,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-12 lg:py-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="pt-12 lg:pt-20 pb-32 bg-white">
       <div className="container px-4 mx-auto">
         <div className="text-center flex flex-col gap-3 mb-12 lg:mb-16">
           <span className="flex lg:flex-row uppercase flex-col justify-center text-base items-center gap-2 text-gray-500">
@@ -95,7 +95,7 @@ const Testimonials = () => {
                   className="w-24 h-24 lg:w-28 lg:h-28 rounded-full mx-auto object-cover border-4 border-indigo-100"
                 />
 
-                <p className="text-md  pb-16 font-medium text-gray-700 italic mb-8 leading-relaxed">
+                <p className="text-base  pb-16 font-medium text-gray-700 italic mb-8 leading-relaxed">
                   "{testimonial.quote}"
                 </p>
 
