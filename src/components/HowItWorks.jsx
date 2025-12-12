@@ -67,7 +67,7 @@ const HowItWorks = () => {
                   <Image
                     src="/images/technical.png"
                     alt="technical support"
-                    className="w-12 h-12"
+                    className="lg:w-12 lg:h-12 h-[30px] w-[30px]"
                     height={60}
                     width={60}
                   ></Image>
@@ -88,7 +88,8 @@ const HowItWorks = () => {
                   <Image
                     src="/images/management.png"
                     alt="management"
-                    className="w-12 h-12"
+                    sizes="(max-width: 768px) 100vw, 300px"
+                    className="lg:w-12 lg:h-12 h-[30px] w-[45px]"
                     height={60}
                     width={60}
                   ></Image>

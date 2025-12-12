@@ -280,8 +280,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="w-full text-center py-5">
-          <p className="text-white font-extralight flex items-center justify-center gap-1">
-           <span className="flex gap-1 items-center"> <PiCopyrightFill className="text-2xl"/> Recenturesoft  @ 2025. </span>
+          <p className="text-white text-sm text-nowrap font-extralight flex items-center justify-center gap-1">
+           <span className="flex gap-1 text-sm items-center"> <PiCopyrightFill className="text-2xl"/> Recenturesoft  @ 2025. </span>
             All Rights Reserved.
           </p>
         </div>

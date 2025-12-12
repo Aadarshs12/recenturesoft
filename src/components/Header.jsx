@@ -24,35 +24,56 @@ const Header = () => {
     { href: "/contact-us", label: "Contact Us" },
   ];
 
+  const openDropdown = () => {
+    setIsDropdownOpen(true);
+    document.body.classList.add("no-scroll");
+  };
+
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
+    document.body.classList.remove("no-scroll");
+  };
+
   const toggleDropdown = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    setIsDropdownOpen((prev) => !prev);
+    if (isDropdownOpen) {
+      closeDropdown();
+    } else {
+      openDropdown();
+    }
   };
 
   const handleMouseEnter = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    setIsDropdownOpen(true);
+    openDropdown();
   };
 
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
-      setIsDropdownOpen(false);
+      closeDropdown();
     }, 200);
   };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
+        closeDropdown();
       }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.body.classList.remove("no-scroll");
     };
   }, []);
+
+  useEffect(() => {
+    if (!isDropdownOpen) {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [isDropdownOpen]);
 
   return (
     <header className="relative flex justify-between py-6 bg-white items-center container mx-auto px-4 sm:px-6 lg:px-8 z-50">
@@ -108,7 +129,7 @@ const Header = () => {
                     <div className="px-8 py-10">
                       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
                         <div className="hidden lg:block lg:col-span-5">
-                          <div className="bg-slate-100  p-6 rounded-3xl">
+                          <div className="bg-slate-100 p-6 rounded-3xl">
                             <Image
                               src="/images/rsoft.jpg"
                               alt="Recenturesoft Infotech"
@@ -116,6 +137,7 @@ const Header = () => {
                               height={400}
                               priority
                               quality={100}
+                              sizes="(max-width: 768px) 100vw, 300px"
                               className="w-full h-40 object-cover rounded-2xl shadow-2xl border-4 border-white"
                             />
                             <div className="mt-6">
@@ -144,7 +166,7 @@ const Header = () => {
                                   <LuChevronDown className="inline" />
                                 </span>
                               </a>
-                              <ul className="sub-menu mt-3 pl-6 space-y-2 border-l-2 border-gray-200 hover:border-[#db3029] hover:border-[#db3029]">
+                              <ul className="sub-menu mt-3 pl-6 space-y-2 border-l-2 border-gray-200 hover:border-[#db3029]">
                                 <li>
                                   <Link
                                     href="#"

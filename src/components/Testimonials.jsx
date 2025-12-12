@@ -2,7 +2,7 @@
 import React from "react";
 import { GiMouse } from "react-icons/gi";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -49,21 +49,21 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="pt-12 lg:pt-20 pb-32 bg-white">
+    <section className="pt-5 lg:pt-10 pb-32 bg-white">
       <div className="container px-4 mx-auto">
         <div className="text-center flex flex-col gap-3 mb-12 lg:mb-16">
           <span className="flex lg:flex-row uppercase flex-col justify-center text-base items-center gap-2 text-gray-500">
             <GiMouse className="text-3xl -rotate-90" /> At Recenturesoft,
             serving you with the best is always our motto.
           </span>
-          <h2 className="text-6xl w-fit mx-auto primary-gradient text-center font-bold">
+          <h2 className="text-5xl w-fit mx-auto primary-gradient text-center font-bold">
             What Our Clients Say
           </h2>
           <span className="forBorderSeperator"></span>
         </div>
 
         <Swiper
-          modules={[Autoplay, Navigation, Pagination]}
+          modules={[Autoplay, Pagination]}
           spaceBetween={30}
           slidesPerView={1}
           loop={true}
@@ -79,7 +79,6 @@ const Testimonials = () => {
               slidesPerView: 3,
             },
           }}
-          navigation={true}
           pagination={{ clickable: true }}
           className="mx-auto h-full"
         >
@@ -91,7 +90,7 @@ const Testimonials = () => {
                   alt={testimonial.name}
                   height={200}
                   width={200}
-                  sizes="500px"
+                  sizes="(max-width: 768px) 100vw, 300px"
                   className="w-24 h-24 lg:w-28 lg:h-28 rounded-full mx-auto object-cover border-4 border-indigo-100"
                 />
 
@@ -101,12 +100,12 @@ const Testimonials = () => {
 
                 <div className="absolute left-0 right-0 mx-auto bottom-5">
                   <p className="secondary-color font-medium">
-                  {testimonial.title}
-                </p>
+                    {testimonial.title}
+                  </p>
 
-                <h4 className="text-2xl font-bold text-gray-900">
-                  {testimonial.name}
-                </h4>
+                  <h4 className="text-2xl font-bold text-gray-900">
+                    {testimonial.name}
+                  </h4>
                 </div>
               </div>
             </SwiperSlide>

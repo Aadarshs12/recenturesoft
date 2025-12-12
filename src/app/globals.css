@@ -161,6 +161,49 @@ body {
   }
 }
 
+.btn-non-gradient {
+  position: relative;
+  overflow: hidden;
+  background: #2181c2;
+  color: #fff;
+  padding: 5px 5px 5px 25px;
+  border-radius: 9999px;
+  width: fit-content;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.3s ease;
+  span{
+      transition: all 1s ease;
+    }
+
+    .forBeforeEffect{
+      display: block;
+    }
+
+    .forAfterEffect{
+      display: none;
+    }
+  &:hover {
+    .forBeforeEffect{
+      display: none;
+    }
+    span{
+      rotate: 0deg !important;
+    }
+    .forBeforeEffect{
+      display: none !important;
+    }
+
+    .forAfterEffect{
+      display: block !important;
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
 .forBorderSeperator {
   position: relative;
   width: 300px;
@@ -603,4 +646,8 @@ a:-webkit-any-link:focus-visible {
       transform: scale(1.1) rotate(-2deg);
     }
   }
+}
+
+.no-scroll {
+  overflow: hidden;
 }

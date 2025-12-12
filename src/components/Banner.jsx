@@ -27,7 +27,7 @@ const Banner = () => {
           <SwiperSlide>
             <div className="flex lg:flex-row flex-col items-center py-5 px-2">
               <div className="lg:w-1/2 w-full flex flex-col gap-3">
-                <h2 className="lg:text-6xl text-4xl font-bold primary-gradient">
+                <h2 className="lg:text-5xl text-4xl font-bold primary-gradient">
                   Software Development
                 </h2>
                 <p className="lg:text-lg text-base">
@@ -41,6 +41,7 @@ const Banner = () => {
                   alt="Slide 1"
                   height={400}
                   width={400}
+                  sizes="(max-width: 768px) 100vw, 300px"
                   className="w-full object-contain h-[400px]"
                 />
               </div>
@@ -49,7 +50,7 @@ const Banner = () => {
           <SwiperSlide>
             <div className="flex lg:flex-row flex-col items-center p-5">
               <div className="lg:w-1/2 w-full flex flex-col gap-3">
-                <h2 className="lg:text-6xl text-4xl font-bold primary-gradient">
+                <h2 className="lg:text-5xl text-4xl font-bold primary-gradient">
                   Mobile App Development
                 </h2>
                 <p className="lg:text-lg text-base">
@@ -63,6 +64,7 @@ const Banner = () => {
                   alt="Slide 2"
                   height={400}
                   width={400}
+                  sizes="(max-width: 768px) 100vw, 300px"
                   className="w-full object-contain h-[400px]"
                 />
               </div>
@@ -71,7 +73,7 @@ const Banner = () => {
           <SwiperSlide>
             <div className="flex lg:flex-row flex-col items-center p-5">
               <div className="lg:w-1/2 w-full flex flex-col gap-3">
-                <h2 className="lg:text-6xl text-4xl font-bold primary-gradient">
+                <h2 className="lg:text-5xl text-4xl font-bold primary-gradient">
                   Ecommerce Website Development
                 </h2>
                 <p className="lg:text-lg text-base">
@@ -86,6 +88,7 @@ const Banner = () => {
                   alt="Slide 3"
                   height={400}
                   width={400}
+                  sizes="(max-width: 768px) 100vw, 300px"
                   className="w-full object-contain h-[400px]"
                 />
               </div>

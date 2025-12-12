@@ -48,7 +48,7 @@ const ParallaxLayer = ({
 
 export default function AboutSection() {
   return (
-    <section className="py-16 forAboutSection relative overflow-hidden">
+    <section className="py-10 lg:py-14 forAboutSection relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <ParallaxLayer
           scale={1.5}
@@ -120,6 +120,7 @@ export default function AboutSection() {
                 src="/images/about.png"
                 alt="About Recenturesoft Infotech"
                 width={600}
+                sizes="(max-width: 768px) 100vw, 300px"
                 height={500}
                 className="w-full bg-yellow-50 p-5 object-contain h-[450px] rounded-lg"
                 priority

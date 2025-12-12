@@ -52,7 +52,7 @@ const ClientAndPartners = () => {
           speed={3500}
           autoplay={{
             delay: 0,
-            disableOnInteraction: false,
+            disableOnInteraction: true,
           }}
           className="flex items-center"
         >

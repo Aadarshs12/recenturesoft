@@ -49,7 +49,7 @@ const OurServices = () => {
             <GiMouse className="text-3xl -rotate-90" /> At Recenturesoft,
             serving you with the best is always our motto.
           </span>
-          <h1 className="text-6xl w-fit mx-auto primary-gradient text-center font-bold">
+          <h1 className="text-5xl w-fit mx-auto primary-gradient text-center font-bold">
             Our Services
           </h1>
           <span className="forBorderSeperator"></span>
@@ -109,15 +109,24 @@ const OurServices = () => {
                     <p className="text-base text-gray-700 flex-1">
                       {service.description}
                     </p>
-                    <Link
-                      href="#"
-                      className="inline-flex transition-all duration-300 ease-in-out items-center gap-2 btn-gradient py-1 px-6 rounded-lg font-medium"
-                    >
-                      Get our services{" "}
-                      <span className="bg-black p-3 rounded-full -rotate-45">
-                        <FaArrowRightLong />
-                      </span>
-                    </Link>
+                    <div className="text-center lg:text-start">
+                      <Link
+                        href="#"
+                        className="group relative btn-non-gradient inline-flex items-center gap-2 py-1 px-6 rounded-lg font-medium overflow-hidden"
+                      >
+                        <span className="absolute flex items-center justify-center transition-all duration-500 ease-out group-hover:-translate-y-full group-hover:opacity-0">
+                          Get in touch
+                        </span>
+
+                        <span className="flex items-center justify-center transition-all duration-500 ease-out translate-y-10 group-hover:translate-y-0">
+                          Get in touch
+                        </span>
+
+                        <span className="relative bg-black p-3 rounded-full -rotate-45 transition-transform duration-500 group-hover:rotate-0">
+                          <FaArrowRightLong />
+                        </span>
+                      </Link>
+                    </div>
                   </div>
                 </SwiperSlide>
               ))}

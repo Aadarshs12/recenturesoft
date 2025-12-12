@@ -10,7 +10,7 @@ const AddionalInformation = () => {
         backgroundImage: `repeating-radial-gradient(circle at center center, transparent 0px, transparent 2px,rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 3px,transparent 3px, transparent 5px,rgba(0,0,0,0.03) 5px, rgba(0,0,0,0.03) 7px),repeating-radial-gradient(circle at center center, rgb(235,247,255) 0px, rgb(235,247,255) 9px,rgb(235,247,255) 9px, rgb(235,247,255) 21px,rgb(235,247,255) 21px, rgb(235,247,255) 31px,rgb(235,247,255) 31px, rgb(235,247,255) 40px)`,
         backgroundSize: `20px 20px`,
       }}
-      className="py-12 lg:pt-20 pb-28 lg:pb-32 forAddionalInfo"
+      className="py-10 lg:pt-20 pb-28 lg:pb-32 forAddionalInfo"
     >
       <div className="container mx-auto px-4">
         <div

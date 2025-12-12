@@ -42,13 +42,13 @@ const Blogs = () => {
   ];
 
   return (
-    <section className="py-12 bg-white lg:py-20 shadow-2xl">
+    <section className="py-10 bg-white lg:py-14 shadow-2xl">
       <div className="text-center flex flex-col gap-3 mb-12 lg:mb-16">
         <span className="flex lg:flex-row uppercase flex-col justify-center text-base items-center gap-2 text-gray-500">
           <GiMouse className="text-3xl -rotate-90" /> Agile minds pouring in
           some informative, read-worthy content for you!
         </span>
-        <h2 className="text-6xl w-fit mx-auto primary-gradient text-center font-bold">
+        <h2 className="text-5xl w-fit mx-auto primary-gradient text-center font-bold">
           Latest Blog
         </h2>
         <span className="forBorderSeperator"></span>
@@ -107,7 +107,10 @@ const Blogs = () => {
                     href="#"
                     className="inline-flex transition-all duration-300 ease-in-out items-center gap-2 btn-gradient py-1 px-6 rounded-lg font-medium"
                   >
-                    Read more <span className="bg-black p-3 rounded-full -rotate-45"><FaArrowRightLong /></span>
+                    Read more{" "}
+                    <span className="bg-black p-3 rounded-full -rotate-45">
+                      <FaArrowRightLong />
+                    </span>
                   </Link>
                 </div>
               </div>
