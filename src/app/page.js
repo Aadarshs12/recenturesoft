@@ -7,7 +7,6 @@ import FaqSection from "@/components/FaqSection";
 import HowItWorks from "@/components/HowItWorks";
 import OurAbout from "@/components/OurAbout";
 import OurServices from "@/components/OurServices";
-import Partners from "@/components/Partners";
 import Testimonials from "@/components/Testimonials";
 import React from "react";
 
@@ -24,7 +23,6 @@ const page = () => {
       <AddionalInformation />
       <ClientAndPartners />
       <Blogs />
-      <Partners />
     </>
   );
 };

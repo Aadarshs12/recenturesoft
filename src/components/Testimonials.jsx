@@ -56,7 +56,7 @@ const Testimonials = () => {
             <GiMouse className="text-3xl -rotate-90" /> At Recenturesoft,
             serving you with the best is always our motto.
           </span>
-          <h2 className="text-5xl w-fit mx-auto primary-gradient text-center font-bold">
+          <h2 className="text-5xl pb-2 w-fit mx-auto primary-gradient text-center font-bold">
             What Our Clients Say
           </h2>
           <span className="forBorderSeperator"></span>

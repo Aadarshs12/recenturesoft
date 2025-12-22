@@ -1,10 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { GiMouse } from "react-icons/gi";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { MdOutlineDoubleArrow } from "react-icons/md";
 
 const ParallaxLayer = ({
   children,
@@ -46,7 +45,7 @@ const ParallaxLayer = ({
   );
 };
 
-export default function AboutSection() {
+export default function OurAbout() {
   return (
     <section className="py-10 lg:py-14 forAboutSection relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
@@ -105,36 +104,18 @@ export default function AboutSection() {
                 Our Active Members
               </div>
             </div>
+            <div className="about-one_color-layer-two"></div>
 
-            <div className="relative -z-10">
+            <div className="relative forAboutPageBorder -z-10">
               <Image
-                style={{
-                  backgroundImage: `
-        linear-gradient(157.5deg, rgb(95,97,179) 0%, rgb(95,97,179) 16%, rgb(115,120,184) 16%, rgb(115,120,184) 20%, rgb(135,142,188) 20%, rgb(135,142,188) 32%, rgb(155,165,193) 32%, rgb(155,165,193) 38%, rgb(175,187,198) 38%, rgb(175,187,198) 48%, rgb(195,210,203) 48%, rgb(195,210,203) 51%, rgb(215,232,207) 51%, rgb(215,232,207) 59%, rgb(235,255,212) 59%, rgb(235,255,212) 100%),
-        linear-gradient(135deg, rgb(95,97,179) 0%, rgb(95,97,179) 16%, rgb(115,120,184) 16%, rgb(115,120,184) 20%, rgb(135,142,188) 20%, rgb(135,142,188) 32%, rgb(155,165,193) 32%, rgb(155,165,193) 38%, rgb(175,187,198) 38%, rgb(175,187,198) 48%, rgb(195,210,203) 48%, rgb(195,210,203) 51%, rgb(215,232,207) 51%, rgb(215,232,207) 59%, rgb(235,255,212) 59%, rgb(235,255,212) 100%),
-        linear-gradient(112.5deg, rgb(95,97,179) 0%, rgb(95,97,179) 16%, rgb(115,120,184) 16%, rgb(115,120,184) 20%, rgb(135,142,188) 20%, rgb(135,142,188) 32%, rgb(155,165,193) 32%, rgb(155,165,193) 38%, rgb(175,187,198) 38%, rgb(175,187,198) 48%, rgb(195,210,203) 48%, rgb(195,210,203) 51%, rgb(215,232,207) 51%, rgb(215,232,207) 59%, rgb(235,255,212) 59%, rgb(235,255,212) 100%),
-        linear-gradient(90deg, rgb(33,129,194), rgb(201,243,43))
-      `,
-                  backgroundBlendMode: "overlay, overlay, overlay, normal",
-                }}
-                src="/images/about.png"
+                src="/images/about-us/about-us-1.jpg"
                 alt="About Recenturesoft Infotech"
                 width={600}
                 sizes="(max-width: 768px) 100vw, 300px"
                 height={500}
-                className="w-full bg-yellow-50 p-5 object-contain h-[450px] rounded-lg"
+                className="w-full forAboutPageBorder p-5 object-contain h-[350px] rounded-lg"
                 priority
               />
-
-              <div className="absolute top-16 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-cyan-400 to-purple-600 p-4 shadow-lg">
-                <Image
-                  src="/images/pattern-1.png"
-                  alt="Pattern"
-                  width={60}
-                  height={60}
-                  className="animate-pulse"
-                />
-              </div>
             </div>
           </div>
 
@@ -144,43 +125,44 @@ export default function AboutSection() {
               Our About
             </p>
 
-            <h3 className="text-3xl lg:text-4xl w-fit font-bold primary-gradient mb-6 leading-tight">
-              Software Development and Integrated Solutions for Your Business
+            <h3 className="text-3xl w-fit lg:text-4xl font-bold primary-gradient mb-6 leading-tight">
+              About Us
             </h3>
 
             <p className="text-gray-600 mb-8 leading-relaxed">
-              Recenturesoft Infotech is a premier web development company with
-              some of the industry's highly skilled developers and UI/UX
-              engineers...
+              Recenturesoft Infotech is a premium software and application
+              development company with 10 years of experience. We have been
+              focusing on end-to-end business applications, database software,
+              CRM, Management systems, integrated programs, utility programs and
+              much more. With a client base of more than 900 accounts, we have
+              been happy to serve globally from countries like the USA, UK,
+              France, Germany, Italy, etc.
             </p>
 
-            <div className="flex items-center gap-4 mb-8">
-              <Image
-                src="/images/factory.png"
-                alt="Factory"
-                width={40}
-                height={40}
-              />
-              <div>
-                <h6 className="text-lg font-semibold primary-gradient mb-1">
-                  Plus specialised industries
-                </h6>
-                <p className="text-gray-600">
-                  We have a unique yet simple approach for designing and
-                  structuring your site.
-                </p>
+            <p className="text-gray-600 mb-8 leading-relaxed">
+              Our software and management teams have a wide experience in
+              development and always try to fulfil the client's expectations
+              with intensive support throughout your project.
+            </p>
+
+            <div className="flex flex-col gap-3 mb-5">
+              <div className="flex">
+                <span className="flex w-1/2 items-center gap-2 text-gray-600">
+                  <MdOutlineDoubleArrow /> Professional Services
+                </span>
+                <span className="flex w-1/2 items-center gap-2 text-gray-600">
+                  <MdOutlineDoubleArrow /> Experience Advisors
+                </span>
+              </div>
+              <div className="flex">
+                <span className="flex w-1/2 items-center gap-2 text-gray-600">
+                  <MdOutlineDoubleArrow /> Software Development
+                </span>
+                <span className="flex w-1/2 items-center gap-2 text-gray-600">
+                  <MdOutlineDoubleArrow /> Product Engineering
+                </span>
               </div>
             </div>
-
-            <Link
-              href="#"
-              className="inline-flex transition-all duration-300 ease-in-out items-center gap-2 btn-gradient py-1 px-6 rounded-lg font-medium"
-            >
-              Get our services{" "}
-              <span className="bg-black p-3 rounded-full -rotate-45">
-                <FaArrowRightLong />
-              </span>
-            </Link>
           </div>
         </div>
       </div>

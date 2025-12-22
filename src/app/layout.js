@@ -2,6 +2,8 @@ import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/sonner";
+import Partners from "@/components/Partners";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -25,7 +27,23 @@ export default function RootLayout({ children }) {
       <body className={`${outfit.variable} ${inter.variable} antialiased`}>
         <Header />
         {children}
+        <Partners />
         <Footer />
+        <Toaster
+          theme="dark"
+          toastOptions={{
+            style: {
+              backgroundColor: `#fff`,
+              boxShadow: "1px 1px 4px #000000",
+              border: "1px solid #2181c2",
+              fontSize: "15px",
+              fontWeight: "500",
+              color: "#2181c2",
+              padding: "10px",
+              borderRadius: "0px",
+            },
+          }}
+        />
       </body>
     </html>
   );

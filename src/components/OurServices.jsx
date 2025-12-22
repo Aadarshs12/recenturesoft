@@ -109,7 +109,7 @@ const OurServices = () => {
                     <p className="text-base text-gray-700 flex-1">
                       {service.description}
                     </p>
-                    <div className="text-center lg:text-start">
+                    <div className="text-start">
                       <Link
                         href="#"
                         className="group relative btn-non-gradient inline-flex items-center gap-2 py-1 px-6 rounded-lg font-medium overflow-hidden"

@@ -2,7 +2,7 @@
 import React from "react";
 import { GiMouse } from "react-icons/gi";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Image from "next/image";
@@ -48,7 +48,7 @@ const Blogs = () => {
           <GiMouse className="text-3xl -rotate-90" /> Agile minds pouring in
           some informative, read-worthy content for you!
         </span>
-        <h2 className="text-5xl w-fit mx-auto primary-gradient text-center font-bold">
+        <h2 className="text-5xl pb-2 w-fit mx-auto primary-gradient text-center font-bold">
           Latest Blog
         </h2>
         <span className="forBorderSeperator"></span>
@@ -77,7 +77,7 @@ const Blogs = () => {
           {blogs.map((blog, index) => (
             <SwiperSlide key={index}>
               <div className="forBlogsCard bg-indigo-50 rounded-xl">
-                <div className="relative z-10">
+                <div className="relative z-10 overflow-hidden">
                   <Image
                     src={blog?.image}
                     alt={blog?.title}

@@ -27,7 +27,7 @@ const Banner = () => {
           <SwiperSlide>
             <div className="flex lg:flex-row flex-col items-center py-5 px-2">
               <div className="lg:w-1/2 w-full flex flex-col gap-3">
-                <h2 className="lg:text-5xl text-4xl font-bold primary-gradient">
+                <h2 className="lg:text-5xl w-fit text-4xl font-bold primary-gradient">
                   Software Development
                 </h2>
                 <p className="lg:text-lg text-base">
@@ -50,7 +50,7 @@ const Banner = () => {
           <SwiperSlide>
             <div className="flex lg:flex-row flex-col items-center p-5">
               <div className="lg:w-1/2 w-full flex flex-col gap-3">
-                <h2 className="lg:text-5xl text-4xl font-bold primary-gradient">
+                <h2 className="lg:text-5xl w-fit text-4xl font-bold primary-gradient">
                   Mobile App Development
                 </h2>
                 <p className="lg:text-lg text-base">
@@ -73,7 +73,7 @@ const Banner = () => {
           <SwiperSlide>
             <div className="flex lg:flex-row flex-col items-center p-5">
               <div className="lg:w-1/2 w-full flex flex-col gap-3">
-                <h2 className="lg:text-5xl text-4xl font-bold primary-gradient">
+                <h2 className="lg:text-5xl w-fit text-4xl font-bold primary-gradient">
                   Ecommerce Website Development
                 </h2>
                 <p className="lg:text-lg text-base">

@@ -128,7 +128,9 @@ const HowItWorks = () => {
               <Image
                 src="/images/howItWorks.png"
                 alt="FAQ"
-                fill
+                width={400}
+                height={400}
+                sizes="(max-width: 768px) 100vw, 300px"
                 className="object-contain p-5"
               />
               <div className="absolute bottom-5 right-8 rounded-full bg-gradient-to-r from-cyan-400 to-purple-600 p-4 shadow-lg">
