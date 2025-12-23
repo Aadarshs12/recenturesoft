@@ -393,7 +393,7 @@ const Footer = () => {
             </DialogTitle>
           </DialogHeader>
 
-          <div className="flex lg:flex-row flex-col gap-4 overflow-y-auto max-h-[85vh] p-2">
+          <div className="flex lg:flex-row flex-col gap-4 overflow-y-auto max-h-[70vh] sm:max-h-[85vh] p-2">
             <div className="lg:w-1/2 w-full cursor-pointer lg:h-full">
               <Image
                 className="rounded-xl lg:h-full object-cover"

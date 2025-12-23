@@ -71,16 +71,16 @@ const OurServices = () => {
                   pagination: { clickable: true },
                 },
                 640: {
-                  slidesPerView: 1,
-                  pagination: false,
+                  slidesPerView: 2,
+                  pagination: true,
                 },
                 768: {
-                  slidesPerView: 2,
-                  pagination: false,
+                  slidesPerView: 3,
+                  pagination: true,
                 },
                 1024: {
                   slidesPerView: 4,
-                  pagination: false,
+                  pagination: true,
                 },
               }}
               className="our-services-swiper"

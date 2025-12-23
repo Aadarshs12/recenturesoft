@@ -145,8 +145,8 @@ const OurVision = () => {
               </div>
             </div>
           </div>
-          <div className="lg:w-1/2 w-full flex justify-center steps-one_image-inner relative p-5">
-            <div className="relative grid place-content-center rounded-2xl forClientAndCustormer bg-white shadow  steps-one_image w-[500px] text-right h-[400px] ">
+          <div className="lg:w-1/2 w-full flex justify-center steps-one_image-inner relative">
+            <div className="relative grid place-content-center rounded-2xl forClientAndCustormer bg-white shadow p-3 steps-one_image text-right">
               <Image
                 src="/images/about-us/vission.webp"
                 alt="who"
@@ -155,7 +155,7 @@ const OurVision = () => {
                 sizes="(max-width: 768px) 100vw, 300px"
                 className="object-contain rounded-xl"
               />
-              <div className="absolute top-10 left-10 rounded-full bg-gradient-to-r from-blue-500 to-red-600 p-4 shadow-lg">
+              <div className="absolute lg:top-10 bottom-5 right-5 lg:left-10 rounded-full bg-gradient-to-r from-blue-500 h-15 grid place-content-center w-15 to-red-600 p-4 shadow-lg">
                 <IoBulbSharp className="animate-pulse text-2xl text-white" />
               </div>
             </div>

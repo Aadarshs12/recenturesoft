@@ -988,8 +988,24 @@ a:-webkit-any-link:focus-visible {
 }
 
 @media (max-width: 640px) {
+  .forCaptchaAlignment canvas#canv {
+    position: unset !important;
+  }
+  .forWhoWeAre {
+    padding: 60px 0 !important;
+  }
   .forAboutPageBorder:after {
-    top: 0px;
-    right: 20px;
+    border-color: #00000000 !important;
+  }
+  .relative.grid.place-content-center.border-4.rounded-2xl.border-\[\#2181c2\].steps-one_image.w-\[500px\].text-right.h-\[400px\] {
+    border-color: #00000000;
+  }
+  .forAboutSection {
+    .absolute.top-6.bg-slate-50.shadow-2xl.left-6.-rotate-90.rounded-lg.p-4.text-center.z-10 {
+      left: -40px;
+    }
+  }
+  h2#radix-_R_klbH1_ {
+    padding-right: 40px;
   }
 }
