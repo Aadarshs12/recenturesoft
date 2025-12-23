@@ -32,7 +32,6 @@ const ClientAndPartners = () => {
         <div className="client-content">
           <h5 className="sec-title">
             <span className="client-numbers">500+</span> Companies Trust
-            
             <div className="client-text">
               <Image
                 src="/images/logo.png"
@@ -51,10 +50,10 @@ const ClientAndPartners = () => {
           loop={true}
           speed={3500}
           autoplay={{
-            delay: 0,
-            disableOnInteraction: true,
+            delay: 1,
+            disableOnInteraction: false,
           }}
-          className="flex items-center"
+          className="my-marquee-swiper flex items-center"
         >
           {brands.map((img, index) => (
             <SwiperSlide
