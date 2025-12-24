@@ -1,9 +1,9 @@
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
 import { Toaster } from "@/components/ui/sonner";
-import Partners from "@/components/Partners";
+import Partners from "@/components/common/Partners";
 
 const inter = Inter({
   variable: "--font-inter",

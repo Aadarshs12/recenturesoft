@@ -396,9 +396,6 @@ body {
     bottom: 0px;
     cursor: pointer;
   }
-  p {
-    min-height: 120px;
-  }
 }
 
 .our-services-swiper .swiper-pagination {
@@ -432,9 +429,6 @@ body {
 @media (max-width: 1024px) {
   .forBgBanner {
     padding-bottom: 50px;
-  }
-  .forServicesCard p {
-    min-height: 72px;
   }
 }
 

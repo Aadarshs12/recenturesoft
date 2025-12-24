@@ -94,7 +94,7 @@ const OurServices = () => {
                     }}
                     className="forServicesCard shadow-2xs flex flex-col gap-2 p-5 rounded-2xl h-full"
                   >
-                    <div className="forServiceImg flex items-center gap-2">
+                    <div className="forServiceImg flex lg:flex-row flex-col items-start lg:items-center gap-2">
                       <Image
                         src={service.icon}
                         alt={service.title}
@@ -106,7 +106,7 @@ const OurServices = () => {
                         {service.title}
                       </h3>
                     </div>
-                    <p className="text-base text-gray-700 flex-1">
+                    <p className="text-base text-gray-700 lg:min-h-32 md:min-h-40 min-h-28  flex-1">
                       {service.description}
                     </p>
                     <div className="text-start">

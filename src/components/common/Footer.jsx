@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { TbArrowBadgeRightFilled } from "react-icons/tb";
-import { Button } from "./ui/button";
+import { Button } from "../../components/ui/button";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { toast } from "sonner";
 import {
