@@ -50,6 +50,26 @@ const Header = () => {
     return () => window.removeEventListener("resize", checkIfMobile);
   }, []);
 
+  // Prevent body scroll when desktop dropdown is open
+  useEffect(() => {
+    if (isDesktopDropdownOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isDesktopDropdownOpen]);
+
+  // Scroll to top when desktop dropdown opens (ensures header is visible)
+  useEffect(() => {
+    if (isDesktopDropdownOpen) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [isDesktopDropdownOpen]);
+
   // Desktop: Hover open/close
   const handleMouseEnter = () => {
     if (!isMobile) {
@@ -106,11 +126,6 @@ const Header = () => {
     return () => document.removeEventListener("close-sheet", handleCloseSheet);
   }, []);
 
-  // Compute current dropdown state based on device
-  const dropdownIsOpen = isMobile
-    ? isMobileDropdownOpen
-    : isDesktopDropdownOpen;
-
   return (
     <header className="relative flex justify-between py-6 bg-white items-center container mx-auto px-4 sm:px-6 lg:px-8 z-50">
       <Link href="/" className="logo w-1/2 md:w-1/5">
@@ -161,7 +176,7 @@ const Header = () => {
                     isDesktopDropdownOpen
                       ? "opacity-100 translate-y-0 scale-100"
                       : "opacity-0 translate-y-2 scale-95 pointer-events-none"
-                  } fixed inset-x-0 top-24 mx-auto w-full max-w-7xl forDropdownBg rounded-3xl shadow-2xl border-2 border-slate-300 z-[9999] transition-all duration-300 ease-in-out`}
+                  } fixed inset-x-0 top-24 mx-auto w-full max-w-7xl bg-white rounded-3xl shadow-2xl border-2 border-slate-300 z-[9999] transition-all duration-300 ease-in-out`}
                   style={{ left: "50%", transform: "translateX(-50%)" }}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
@@ -169,7 +184,7 @@ const Header = () => {
                   <div className="px-8 py-10">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
                       <div className="hidden lg:block lg:col-span-5">
-                        <div className="p-6 bg-[#ffffff38] shadow rounded-3xl">
+                        <div className="p-6 bg-sky-100 shadow rounded-3xl">
                           <Image
                             src="/images/rsoft.jpg"
                             alt="Recenturesoft Infotech"
@@ -557,65 +572,74 @@ const Header = () => {
                         />
                       </button>
 
-                      {/* Mobile Accordion */}
+                      {/* Mobile Accordion - Full matching desktop */}
                       <div
                         className={`overflow-hidden transition-all duration-500 ease-in-out ${
                           isMobileDropdownOpen
-                            ? "max-h-96 opacity-100"
+                            ? "max-h-[2000px] opacity-100"
                             : "max-h-0 opacity-0"
                         }`}
                       >
-                        <div className="pt-4 pb-6 px-4 space-y-6">
-                          <nav className="space-y-5 text-base">
-                            {/* All your mobile dropdown items remain exactly the same */}
-                            {/* (Kept identical to your code) */}
+                        <div className="pt-4 pb-6 px-4 space-y-8">
+                          <nav className="space-y-6 text-base">
                             <div>
-                              <h4 className="font-medium text-white mb-2">
-                                Software Development
-                              </h4>
+                              <h4 className="font-medium text-white mb-2">Software Development</h4>
                               <ul className="space-y-2 pl-4 border-l border-[#2181c2]">
-                                <li>
-                                  <Link
-                                    href="#"
-                                    onClick={() =>
-                                      document.dispatchEvent(
-                                        new Event("close-sheet")
-                                      )
-                                    }
-                                    className="block text-gray-300 hover:text-[#2181c2]"
-                                  >
-                                    CRM
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link
-                                    href="#"
-                                    onClick={() =>
-                                      document.dispatchEvent(
-                                        new Event("close-sheet")
-                                      )
-                                    }
-                                    className="block text-gray-300 hover:text-[#2181c2]"
-                                  >
-                                    CMS
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link
-                                    href="#"
-                                    onClick={() =>
-                                      document.dispatchEvent(
-                                        new Event("close-sheet")
-                                      )
-                                    }
-                                    className="block text-gray-300 hover:text-[#2181c2]"
-                                  >
-                                    Salesforce
-                                  </Link>
-                                </li>
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">CRM</Link></li>
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">CMS</Link></li>
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">Salesforce</Link></li>
                               </ul>
                             </div>
-                            {/* ... rest of your mobile sections unchanged ... */}
+
+                            <div>
+                              <h4 className="font-medium text-white mb-2">Web Development</h4>
+                              <ul className="space-y-2 pl-4 border-l border-[#2181c2]">
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">Web Design</Link></li>
+                              </ul>
+                            </div>
+
+                            <div>
+                              <h4 className="font-medium text-white mb-2">E-Commerce</h4>
+                              <ul className="space-y-2 pl-4 border-l border-[#2181c2]">
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">Opencart Development</Link></li>
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">Magento Development</Link></li>
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">eBay Store Management</Link></li>
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">Amazon Store Management</Link></li>
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">Wordpress Development</Link></li>
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">Shopify Development</Link></li>
+                              </ul>
+                            </div>
+
+                            <div>
+                              <h4 className="font-medium text-white mb-2">Mobile App Development</h4>
+                              <ul className="space-y-2 pl-4 border-l border-[#2181c2]">
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">iPhone Apps Development</Link></li>
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">iPad Apps Development</Link></li>
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">Android Apps Development</Link></li>
+                              </ul>
+                            </div>
+
+                            <div>
+                              <h4 className="font-medium text-white mb-2">Technology Solution</h4>
+                              <ul className="space-y-2 pl-4 border-l border-[#2181c2]">
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">Html5 Development</Link></li>
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">Node Js Development</Link></li>
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">Java Development</Link></li>
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">Flask Development</Link></li>
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">Prestashop Development</Link></li>
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">Python Development</Link></li>
+                              </ul>
+                            </div>
+
+                            <div>
+                              <h4 className="font-medium text-white mb-2">Digital Marketing</h4>
+                              <ul className="space-y-2 pl-4 border-l border-[#2181c2]">
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">SEO Service</Link></li>
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">SEO Package</Link></li>
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">Social Networking</Link></li>
+                                <li><Link href="#" onClick={() => document.dispatchEvent(new Event("close-sheet"))} className="block text-gray-300 hover:text-[#2181c2]">Content Writing</Link></li>
+                              </ul>
+                            </div>
                           </nav>
                         </div>
                       </div>
