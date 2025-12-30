@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { TbArrowBadgeRightFilled } from "react-icons/tb";
@@ -28,7 +27,6 @@ import {
 
 const Footer = () => {
   const [open, setOpen] = useState(false);
-  const pathname = usePathname();
 
   const {
     register,
@@ -399,8 +397,8 @@ const Footer = () => {
                 className="rounded-xl lg:h-full object-cover"
                 height={400}
                 width={400}
-                src="/images/modal-img.jpg"
-                alt="modal-img.jpg"
+                src="/images/contact-us/contact.jpg"
+                alt="modal-img"
               ></Image>
             </div>
             <div className="lg:w-1/2 w-full px-5 lg:h-full">

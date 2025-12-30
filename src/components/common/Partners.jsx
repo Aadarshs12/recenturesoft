@@ -27,7 +27,7 @@ const Partners = () => {
               Certification / Member / Partner
             </h2>
           </div>
-          <div className="lg:w-1/2 w-full flex items-center justify-end gap-8">
+          <div className="lg:w-1/2 w-full flex items-center justify-center lg:justify-end gap-8">
             {partners_img.map((prtnr, index) => (
               <div key={index}>
                 <Image

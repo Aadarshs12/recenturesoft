@@ -86,7 +86,7 @@ const WhoAreWe = () => {
             </ParallaxLayer>
             <div className="relative grid place-content-center border-4 rounded-2xl border-[#2181c2]  steps-one_image w-[500px] text-right h-[400px] ">
               <Image
-                src="/images/about-us/who.jpg"
+                src="/images/about-us/who-are-we.jpg"
                 alt="who"
                 height={400}
                 width={400}
