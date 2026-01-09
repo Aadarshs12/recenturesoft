@@ -1050,3 +1050,27 @@ header {
     0 4px 15px #a59d9d66;
   background-color: #94989beb !important;
 }
+
+.forContactUsPage {
+  .react-tel-input .flag-dropdown.open .selected-flag {
+    background: #ffffff00 !important;
+  }
+
+  .react-tel-input .selected-flag:hover,
+  .react-tel-input .selected-flag:focus {
+    background: #ffffff00 !important;
+  }
+
+  a#reload_href {
+    position: absolute;
+    right: 8px;
+    top: 12px;
+    background-color: #fff !important;
+    padding: 3px;
+    font-weight: 600 !important;
+  }
+
+  canvas#canv {
+    margin-right: 7px;
+  }
+}
