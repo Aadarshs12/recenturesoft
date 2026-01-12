@@ -6,6 +6,7 @@ import { IoIosMail } from "react-icons/io";
 import { TbArrowBadgeRightFilled } from "react-icons/tb";
 import { Button } from "../../components/ui/button";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { usePathname } from "next/navigation";
 import { toast } from "sonner";
 import {
   Dialog,
@@ -27,6 +28,7 @@ import {
 
 const Footer = () => {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   const {
     register,
@@ -357,22 +359,23 @@ const Footer = () => {
         </div>
       </footer>
 
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogTrigger asChild>
-          <div className="forGetQuoteModal w-fit border-0" variant="outline">
-            <Image
-              height={80}
-              width={80}
-              src="/images/get-quote.webp"
-              alt="get-quote-img"
-              sizes="(max-width: 768px) 100vw, 300px"
-              className="object-cover"
-            ></Image>
-          </div>
-        </DialogTrigger>
+      { pathname !== "/contact-us" && (
+        <Dialog open={open} onOpenChange={setOpen}>
+          <DialogTrigger asChild>
+            <div className="forGetQuoteModal w-fit border-0" variant="outline">
+              <Image
+                height={80}
+                width={80}
+                src="/images/get-quote.webp"
+                alt="get-quote-img"
+                sizes="(max-width: 768px) 100vw, 300px"
+                className="object-cover"
+              ></Image>
+            </div>
+          </DialogTrigger>
 
-        <DialogContent
-          className="
+          <DialogContent
+            className="
     forMirrorEffectModal
     sm:max-w-[800px]
     sm:max-h-[80vh]
@@ -381,191 +384,192 @@ const Footer = () => {
     rounded-lg
     shadow-xl
   "
-        >
-          <DialogHeader>
-            <DialogTitle className="text-white text-xl">
-              Free Consultation ! Talk to Our{" "}
-              <span className="primary-gradient font-extrabold text-2xl">
-                Professionals Now !
-              </span>
-            </DialogTitle>
-          </DialogHeader>
+          >
+            <DialogHeader>
+              <DialogTitle className="text-white text-xl">
+                Free Consultation ! Talk to Our{" "}
+                <span className="primary-gradient font-extrabold text-2xl">
+                  Professionals Now !
+                </span>
+              </DialogTitle>
+            </DialogHeader>
 
-          <div className="flex lg:flex-row flex-col gap-4 overflow-y-auto max-h-[70vh] sm:max-h-[85vh] p-2">
-            <div className="lg:w-1/2 w-full cursor-pointer lg:h-full">
-              <Image
-                className="rounded-xl lg:h-full object-cover"
-                height={400}
-                width={400}
-                src="/images/contact-us/contact.jpg"
-                alt="modal-img"
-              ></Image>
-            </div>
-            <div className="lg:w-1/2 w-full px-5 lg:h-full">
-              <form
-                className="flex flex-col gap-3"
-                onSubmit={handleSubmit(onSubmit)}
-              >
-                <div>
-                  <input
-                    className="border-b h-8 outline-0 border-slate-200  focus:border-[#db3029] placeholder:text-slate-200 text-white"
-                    placeholder="Enter Full Name"
-                    type="text"
-                    {...register("fullName", {
-                      required: "Full Name is required",
-                    })}
-                    style={{ width: "100%", padding: 8, marginTop: 5 }}
-                  />
-                  {errors.fullName && (
-                    <p style={{ color: "red" }}>{errors.fullName.message}</p>
-                  )}
-                </div>
-                <div>
-                  <input
-                    placeholder="Enter Email"
-                    className="border-b h-8 outline-0 focus:border-[#db3029] border-slate-200 placeholder:text-slate-200 text-white"
-                    type="email"
-                    {...register("email", {
-                      required: "Email is required",
-                      pattern: {
-                        value:
-                          /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-                        message: "Invalid email address",
-                      },
-                    })}
-                    style={{ width: "100%", padding: 8, marginTop: 5 }}
-                  />
-                  {errors.email && (
-                    <p style={{ color: "red" }}>{errors.email.message}</p>
-                  )}
-                </div>
-                <div>
-                  <Controller
-                    name="phone"
-                    control={control}
-                    defaultValue=""
-                    rules={{
-                      required: "Phone number is required",
-                      minLength: {
-                        value: 10,
-                        message: "Phone number must be at least 10 digits",
-                      },
-                    }}
-                    render={({ field }) => (
-                      <PhoneInput
-                        className="text-white h-8"
-                        {...field}
-                        country={"in"}
-                        onChange={field.onChange}
-                        inputProps={{
-                          placeholder: "Enter Phone Number",
-                        }}
-                        containerStyle={{ width: "100%" }} // make container full width
-                        inputStyle={{
-                          width: "100%",
-                          border: "none", // remove default border
-                          borderBottom: "1px solid #e2e8f0", // bottom border like Tailwind gray-300
-                          borderRadius: 0, // remove rounded corners
-                          backgroundColor: "transparent", // transparent
-                          padding: "8px 0", // top/bottom padding
-                          fontSize: 16,
-                          outline: "none",
-                          textIndent: "45px",
-                          color: "#f2f2f2",
-                        }}
-                        buttonStyle={{
-                          border: "none", // remove flag button border
-                          background: "transparent", // transparent background
-                        }}
-                        dropdownStyle={{
-                          border: "1px solid #d1d5db",
-                        }}
-                      />
-                    )}
-                  />
-
-                  {errors.phone && (
-                    <p style={{ color: "red" }}>{errors.phone.message}</p>
-                  )}
-                </div>
-
-                <div>
-                  <input
-                    placeholder="Write Subject"
-                    className="border-b h-8 outline-0 focus:border-[#db3029] border-slate-200 placeholder:text-slate-200 text-white"
-                    type="text"
-                    {...register("subject", {
-                      required: "Subject is required",
-                    })}
-                    style={{ width: "100%", padding: 8, marginTop: 5 }}
-                  />
-                  {errors.subject && (
-                    <p style={{ color: "red" }}>{errors.subject.message}</p>
-                  )}
-                </div>
-
-                {/* Your Message */}
-                <div>
-                  <textarea
-                    placeholder="Your Message"
-                    className="border-b outline-0 border-slate-200 placeholder:text-slate-200 text-white"
-                    {...register("message", {
-                      required: "Message is required",
-                    })}
-                    style={{
-                      width: "100%",
-                      padding: 8,
-                      height: 80, // fixed height in pixels
-                      borderBottom: "2px solid #d1d5db",
-                      borderRadius: 0,
-                      backgroundColor: "transparent",
-                      resize: "vertical", // allow user to resize vertically only
-                    }}
-                  />
-                  {errors.message && (
-                    <p style={{ color: "red" }}>{errors.message.message}</p>
-                  )}
-                </div>
-
-                <div className="forCaptchaAlignment">
-                  <input
-                    placeholder="Enter Captcha"
-                    className="border-b h-8 outline-0 focus:border-[#db3029] border-slate-200 placeholder:text-slate-200 text-white"
-                    {...register("captcha", {
-                      required: "Captcha is required",
-                    })}
-                    style={{
-                      width: "100%",
-                      padding: 8,
-                      background: "transparent",
-                    }}
-                  />
-                  <LoadCanvasTemplate reloadText="↻" />
-
-                  {errors.captcha && (
-                    <p style={{ color: "red" }}>{errors.captcha.message}</p>
-                  )}
-                </div>
-
-                <Button
-                  type="submit"
-                  className="text-white w-fit  flex justify-end mt-5"
+            <div className="flex lg:flex-row flex-col gap-4 overflow-y-auto max-h-[70vh] sm:max-h-[85vh] p-2">
+              <div className="lg:w-1/2 w-full cursor-pointer lg:h-full">
+                <Image
+                  className="rounded-xl lg:h-full object-cover"
+                  height={400}
+                  width={400}
+                  src="/images/contact-us/contact.jpg"
+                  alt="modal-img"
+                ></Image>
+              </div>
+              <div className="lg:w-1/2 w-full px-5 lg:h-full">
+                <form
+                  className="flex flex-col gap-3"
+                  onSubmit={handleSubmit(onSubmit)}
                 >
-                  <div
-                    href="#"
-                    className="inline-flex transition-all duration-300 ease-in-out items-center gap-2 btn-gradient py-1 px-6 rounded-lg font-medium"
-                  >
-                    Submit{" "}
-                    <span className="bg-black p-3 rounded-full -rotate-45">
-                      <FaArrowRightLong />
-                    </span>
+                  <div>
+                    <input
+                      className="border-b h-8 outline-0 border-slate-200  focus:border-[#db3029] placeholder:text-slate-200 text-white"
+                      placeholder="Enter Full Name"
+                      type="text"
+                      {...register("fullName", {
+                        required: "Full Name is required",
+                      })}
+                      style={{ width: "100%", padding: 8, marginTop: 5 }}
+                    />
+                    {errors.fullName && (
+                      <p style={{ color: "red" }}>{errors.fullName.message}</p>
+                    )}
                   </div>
-                </Button>
-              </form>
+                  <div>
+                    <input
+                      placeholder="Enter Email"
+                      className="border-b h-8 outline-0 focus:border-[#db3029] border-slate-200 placeholder:text-slate-200 text-white"
+                      type="email"
+                      {...register("email", {
+                        required: "Email is required",
+                        pattern: {
+                          value:
+                            /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                          message: "Invalid email address",
+                        },
+                      })}
+                      style={{ width: "100%", padding: 8, marginTop: 5 }}
+                    />
+                    {errors.email && (
+                      <p style={{ color: "red" }}>{errors.email.message}</p>
+                    )}
+                  </div>
+                  <div>
+                    <Controller
+                      name="phone"
+                      control={control}
+                      defaultValue=""
+                      rules={{
+                        required: "Phone number is required",
+                        minLength: {
+                          value: 10,
+                          message: "Phone number must be at least 10 digits",
+                        },
+                      }}
+                      render={({ field }) => (
+                        <PhoneInput
+                          className="text-white h-8"
+                          {...field}
+                          country={"in"}
+                          onChange={field.onChange}
+                          inputProps={{
+                            placeholder: "Enter Phone Number",
+                          }}
+                          containerStyle={{ width: "100%" }} // make container full width
+                          inputStyle={{
+                            width: "100%",
+                            border: "none", // remove default border
+                            borderBottom: "1px solid #e2e8f0", // bottom border like Tailwind gray-300
+                            borderRadius: 0, // remove rounded corners
+                            backgroundColor: "transparent", // transparent
+                            padding: "8px 0", // top/bottom padding
+                            fontSize: 16,
+                            outline: "none",
+                            textIndent: "45px",
+                            color: "#f2f2f2",
+                          }}
+                          buttonStyle={{
+                            border: "none", // remove flag button border
+                            background: "transparent", // transparent background
+                          }}
+                          dropdownStyle={{
+                            border: "1px solid #d1d5db",
+                          }}
+                        />
+                      )}
+                    />
+
+                    {errors.phone && (
+                      <p style={{ color: "red" }}>{errors.phone.message}</p>
+                    )}
+                  </div>
+
+                  <div>
+                    <input
+                      placeholder="Write Subject"
+                      className="border-b h-8 outline-0 focus:border-[#db3029] border-slate-200 placeholder:text-slate-200 text-white"
+                      type="text"
+                      {...register("subject", {
+                        required: "Subject is required",
+                      })}
+                      style={{ width: "100%", padding: 8, marginTop: 5 }}
+                    />
+                    {errors.subject && (
+                      <p style={{ color: "red" }}>{errors.subject.message}</p>
+                    )}
+                  </div>
+
+                  {/* Your Message */}
+                  <div>
+                    <textarea
+                      placeholder="Your Message"
+                      className="border-b outline-0 border-slate-200 placeholder:text-slate-200 text-white"
+                      {...register("message", {
+                        required: "Message is required",
+                      })}
+                      style={{
+                        width: "100%",
+                        padding: 8,
+                        height: 80, // fixed height in pixels
+                        borderBottom: "2px solid #d1d5db",
+                        borderRadius: 0,
+                        backgroundColor: "transparent",
+                        resize: "vertical", // allow user to resize vertically only
+                      }}
+                    />
+                    {errors.message && (
+                      <p style={{ color: "red" }}>{errors.message.message}</p>
+                    )}
+                  </div>
+
+                  <div className="forCaptchaAlignment">
+                    <input
+                      placeholder="Enter Captcha"
+                      className="border-b h-8 outline-0 focus:border-[#db3029] border-slate-200 placeholder:text-slate-200 text-white"
+                      {...register("captcha", {
+                        required: "Captcha is required",
+                      })}
+                      style={{
+                        width: "100%",
+                        padding: 8,
+                        background: "transparent",
+                      }}
+                    />
+                    <LoadCanvasTemplate reloadText="↻" />
+
+                    {errors.captcha && (
+                      <p style={{ color: "red" }}>{errors.captcha.message}</p>
+                    )}
+                  </div>
+
+                  <Button
+                    type="submit"
+                    className="text-white w-fit  flex justify-end mt-5"
+                  >
+                    <div
+                      href="#"
+                      className="inline-flex transition-all duration-300 ease-in-out items-center gap-2 btn-gradient py-1 px-6 rounded-lg font-medium"
+                    >
+                      Submit{" "}
+                      <span className="bg-black p-3 rounded-full -rotate-45">
+                        <FaArrowRightLong />
+                      </span>
+                    </div>
+                  </Button>
+                </form>
+              </div>
             </div>
-          </div>
-        </DialogContent>
-      </Dialog>
+          </DialogContent>
+        </Dialog>
+      )}
     </>
   );
 };

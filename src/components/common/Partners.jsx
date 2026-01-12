@@ -23,7 +23,7 @@ const Partners = () => {
       <div className="container px-4 mx-auto">
         <div className="flex flex-wrap items-center gap-5 lg:gap-0">
           <div className="lg:w-1/2 w-full">
-            <h2 className="lg:text-4xl text-center text-2xl font-bold primary-gradient">
+            <h2 className="lg:text-4xl text-center lg:text-start text-2xl font-bold primary-gradient">
               Certification / Member / Partner
             </h2>
           </div>
