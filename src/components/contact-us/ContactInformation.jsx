@@ -13,12 +13,12 @@ const ContactInformation = () => {
         {/* <h3 className="text-2xl font-bold mx-auto primary-gradient w-fit mb-7">
           Explore Full Conatct Details
         </h3> */}
-        <div className="flex gap-10">
+        <div className="flex lg:gap-10 gap-20 lg:flex-row flex-col">
           <div
             style={{
               backgroundImage: `linear-gradient(489deg, rgba(187, 187, 187, 0.03) 0%, rgba(187, 187, 187, 0.03) 22%,rgba(207, 207, 207, 0.03) 22%, rgba(207, 207, 207, 0.03) 43%,rgba(148, 148, 148, 0.03) 43%, rgba(148, 148, 148, 0.03) 62%,rgba(90, 90, 90, 0.03) 62%, rgba(90, 90, 90, 0.03) 68%,rgba(195, 195, 195, 0.03) 68%, rgba(195, 195, 195, 0.03) 88%,rgba(34, 34, 34, 0.03) 88%, rgba(34, 34, 34, 0.03) 95%,rgba(215, 215, 215, 0.03) 95%, rgba(215, 215, 215, 0.03) 100%),linear-gradient(215deg, rgba(100, 100, 100, 0.03) 0%, rgba(100, 100, 100, 0.03) 9%,rgba(5, 5, 5, 0.03) 9%, rgba(5, 5, 5, 0.03) 40%,rgba(89, 89, 89, 0.03) 40%, rgba(89, 89, 89, 0.03) 44%,rgba(5, 5, 5, 0.03) 44%, rgba(5, 5, 5, 0.03) 69%,rgba(130, 130, 130, 0.03) 69%, rgba(130, 130, 130, 0.03) 79%,rgba(204, 204, 204, 0.03) 79%, rgba(204, 204, 204, 0.03) 88%,rgba(247, 247, 247, 0.03) 88%, rgba(247, 247, 247, 0.03) 100%),linear-gradient(270deg, rgb(17,26,33),rgb(12,21,30))`,
             }}
-            className="lg:w-1/3 shadow rounded-2xl p-5 relative"
+            className="lg:w-1/3 w-full shadow rounded-2xl p-5 relative"
           >
             <div
               className="absolute left-0 right-0 mx-auto -top-[52px] w-[105px] h-[105px] grid place-content-center rounded-xl"
@@ -66,7 +66,7 @@ const ContactInformation = () => {
             style={{
               backgroundImage: `linear-gradient(489deg, rgba(187, 187, 187, 0.03) 0%, rgba(187, 187, 187, 0.03) 22%,rgba(207, 207, 207, 0.03) 22%, rgba(207, 207, 207, 0.03) 43%,rgba(148, 148, 148, 0.03) 43%, rgba(148, 148, 148, 0.03) 62%,rgba(90, 90, 90, 0.03) 62%, rgba(90, 90, 90, 0.03) 68%,rgba(195, 195, 195, 0.03) 68%, rgba(195, 195, 195, 0.03) 88%,rgba(34, 34, 34, 0.03) 88%, rgba(34, 34, 34, 0.03) 95%,rgba(215, 215, 215, 0.03) 95%, rgba(215, 215, 215, 0.03) 100%),linear-gradient(215deg, rgba(100, 100, 100, 0.03) 0%, rgba(100, 100, 100, 0.03) 9%,rgba(5, 5, 5, 0.03) 9%, rgba(5, 5, 5, 0.03) 40%,rgba(89, 89, 89, 0.03) 40%, rgba(89, 89, 89, 0.03) 44%,rgba(5, 5, 5, 0.03) 44%, rgba(5, 5, 5, 0.03) 69%,rgba(130, 130, 130, 0.03) 69%, rgba(130, 130, 130, 0.03) 79%,rgba(204, 204, 204, 0.03) 79%, rgba(204, 204, 204, 0.03) 88%,rgba(247, 247, 247, 0.03) 88%, rgba(247, 247, 247, 0.03) 100%),linear-gradient(270deg, rgb(17,26,33),rgb(12,21,30))`,
             }}
-            className="lg:w-1/3 shadow rounded-2xl p-5 relative"
+            className="lg:w-1/3 w-full shadow rounded-2xl p-5 relative"
           >
             <div
               className="absolute left-0 right-0 mx-auto -top-[52px] w-[105px] h-[105px] grid place-content-center rounded-xl"
@@ -109,7 +109,7 @@ const ContactInformation = () => {
             style={{
               backgroundImage: `linear-gradient(489deg, rgba(187, 187, 187, 0.03) 0%, rgba(187, 187, 187, 0.03) 22%,rgba(207, 207, 207, 0.03) 22%, rgba(207, 207, 207, 0.03) 43%,rgba(148, 148, 148, 0.03) 43%, rgba(148, 148, 148, 0.03) 62%,rgba(90, 90, 90, 0.03) 62%, rgba(90, 90, 90, 0.03) 68%,rgba(195, 195, 195, 0.03) 68%, rgba(195, 195, 195, 0.03) 88%,rgba(34, 34, 34, 0.03) 88%, rgba(34, 34, 34, 0.03) 95%,rgba(215, 215, 215, 0.03) 95%, rgba(215, 215, 215, 0.03) 100%),linear-gradient(215deg, rgba(100, 100, 100, 0.03) 0%, rgba(100, 100, 100, 0.03) 9%,rgba(5, 5, 5, 0.03) 9%, rgba(5, 5, 5, 0.03) 40%,rgba(89, 89, 89, 0.03) 40%, rgba(89, 89, 89, 0.03) 44%,rgba(5, 5, 5, 0.03) 44%, rgba(5, 5, 5, 0.03) 69%,rgba(130, 130, 130, 0.03) 69%, rgba(130, 130, 130, 0.03) 79%,rgba(204, 204, 204, 0.03) 79%, rgba(204, 204, 204, 0.03) 88%,rgba(247, 247, 247, 0.03) 88%, rgba(247, 247, 247, 0.03) 100%),linear-gradient(270deg, rgb(17,26,33),rgb(12,21,30))`,
             }}
-            className="lg:w-1/3 shadow rounded-2xl p-5 relative"
+            className="lg:w-1/3 w-full shadow rounded-2xl p-5 relative"
           >
             <div
               className="absolute left-0 right-0 mx-auto -top-[52px] w-[105px] h-[105px] grid place-content-center rounded-xl"
