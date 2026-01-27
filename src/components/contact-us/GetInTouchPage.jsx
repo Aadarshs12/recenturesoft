@@ -61,57 +61,22 @@ const GetInTouchPage = () => {
                 src="/images/contact-us/contact.jpg"
                 alt="Contact us"
                 width={800}
-                height={600}
+                height={500}
                 className="object-cover w-full h-full"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             </div>
 
-            <div
-              style={{
-                backgroundImage: `radial-gradient(circle at center center, transparent,rgb(255,255,255)),repeating-linear-gradient(135deg, rgb(255,255,255) 0px, rgb(255,255,255) 12px,transparent 12px, transparent 19px,rgb(255,255,255) 19px, rgb(255,255,255) 24px,transparent 24px, transparent 28px),repeating-linear-gradient(45deg, rgb(245,245,245) 0px, rgb(245,245,245) 7px,transparent 7px, transparent 14px),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255))`,
-              }}
-              className="space-y-6 px-10 shadow py-6 rounded-3xl"
-            >
-              <h3 className="text-2xl font-bold primary-gradient">
-                Contact Information
-              </h3>
-              <div className="space-y-4">
-                <a
-                  target="_blank"
-                  href="mailto:info@recenturesoft.com"
-                  className="flex items-center gap-4 text-black"
-                >
-                  <div className="p-3 bg-slate-200 shadow rounded-full">
-                    <FaEnvelope className="secondary-color text-xl" />
-                  </div>
-                  <span>info@recenturesoft.com</span>
-                </a>
-                <a
-                  href="https://api.whatsapp.com/send?phone=+917770003288&text=Hi"
-                  target="_blank"
-                  className="flex items-center gap-4 text-black"
-                >
-                  <div className="p-3 bg-slate-200 shadow rounded-full">
-                    <IoLogoWhatsapp className="secondary-color text-xl" />
-                  </div>
-                  <span>+91 777 000 3288</span>
-                </a>
-                <a
-                  target="_blank"
-                  href="https://www.google.com/maps/place/Recenturesoft+Infotech+Pvt+Ltd/@28.618779,77.3771837,17z/data=!3m1!4b1!4m6!3m5!1s0x390cef5e2369b331:0x2d206ff025b772dc!8m2!3d28.6187743!4d77.3797586!16s%2Fg%2F11sq1jzkdp!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoASAFQAw%3D%3D"
-                  className="flex items-center gap-4 text-black"
-                >
-                  <div className="p-3 bg-slate-200 shadow rounded-full">
-                    <FaLocationDot className="secondary-color text-xl" />
-                  </div>
-                  <span className="text-balance">
-                    A-125, A Block, Sector 63, Noida, Uttar Pradesh, India,
-                    201309
-                  </span>
-                </a>
-              </div>
+            <div>
+              <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.3663947963078!2d77.3771836745094!3d28.618778984706882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef5e2369b331%3A0x2d206ff025b772dc!2sRecenturesoft%20Infotech%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1768231228438!5m2!1sen!2sin"
+        className="w-full h-[280px] rounded-3xl shadow-2xl"
+        style={{border: `0`}}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
             </div>
           </div>
 

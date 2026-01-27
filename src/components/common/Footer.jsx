@@ -351,7 +351,7 @@ const Footer = () => {
             <p className="text-white text-sm text-nowrap font-extralight flex items-center justify-center gap-1">
               <span className="flex gap-1 text-sm items-center">
                 {" "}
-                <PiCopyrightFill className="text-2xl" /> Recenturesoft @ 2025.{" "}
+                <PiCopyrightFill className="text-2xl" /> Recenturesoft @ 2026.{" "}
               </span>
               All Rights Reserved.
             </p>
