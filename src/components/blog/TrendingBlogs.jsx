@@ -42,7 +42,7 @@ const TrendingBlogs = () => {
           <div className="relative z-10 overflow-hidden">
             <Image
               sizes="(max-width: 768px) 100vw, 300px"
-              className="w-full h-[400px] rounded-2xl object-cover"
+              className="w-full md:h-[400px] h-[250px] rounded-2xl object-cover"
               height={600}
               width={600}
               src={item?.image}

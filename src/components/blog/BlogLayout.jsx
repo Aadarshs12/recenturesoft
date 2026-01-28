@@ -16,6 +16,19 @@ const BlogLayout = () => {
     { name: "Marketing", count: 6 },
     { name: "Management", count: 4 },
   ];
+  const tags = [
+    { tag: "Growth" },
+    { tag: "Drive" },
+    { tag: "Lead" },
+    { tag: "Success" },
+    { tag: "Optimize" },
+    { tag: "Results" },
+    { tag: "Innovate" },
+    { tag: "Impact" },
+    { tag: "Focus" },
+    { tag: "Tech" },
+  ];
+
   const blogs = [
     {
       date: "10 January 2025",
@@ -52,11 +65,11 @@ const BlogLayout = () => {
   return (
     <section className="py-8 lg:py-14">
       <div className="container mx-auto px-4">
-        <div className="flex gap-8">
-          <div className="lg:w-8/12">
+        <div className="flex lg:flex-row flex-col gap-8">
+          <div className="lg:w-8/12 w-full">
             <TrendingBlogs />
           </div>
-          <div className="lg:w-4/12 flex flex-col gap-7 sticky top-7 self-start">
+          <div className="lg:w-4/12 w-full flex flex-col gap-7 sticky top-7 self-start">
             <div className="forBlogLayout p-5 rounded-xl">
               <h2 className="font-semibold text-xl primary-color mb-2 w-fit">
                 Search here
@@ -118,10 +131,39 @@ const BlogLayout = () => {
               <h2 className="font-semibold text-xl primary-color mb-2 w-fit">
                 Categories
               </h2>
-              <ul>
-                <li className="bg-white p-4 rounded-2xl shadow text-lg primary-color">
-                  <Link href="#">Innovation <span className="float-end tertiary-color">(04)</span></Link>
-                </li>
+              <ul className="flex flex-col gap-3">
+                {categories.map((item, index) => {
+                  return (
+                    <li
+                      key={index}
+                      className="bg-white text-[#2181c2] hover:bg-slate-50 cursor-pointer p-4 rounded-2xl shadow text-lg "
+                    >
+                      <Link href="#">
+                        {item?.name}{" "}
+                        <span className="float-end tertiary-color">
+                          (0{item?.count})
+                        </span>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className="forBlogLayout p-5 rounded-xl">
+              <h2 className="font-semibold text-xl primary-color mb-2 w-fit">
+                Tags
+              </h2>
+              <ul className="flex flex-wrap gap-3">
+                {tags.map((item, index) => {
+                  return (
+                    <li
+                      key={index}
+                      className="bg-white text-[#2181c2] hover:bg-slate-50 cursor-pointer px-2 py-1 rounded-md shadow text-sm "
+                    >
+                      <Link href="#">{item?.tag}</Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>
