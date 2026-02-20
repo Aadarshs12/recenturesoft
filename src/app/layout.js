@@ -23,8 +23,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${outfit.variable} ${inter.variable} antialiased`}>
+    <html lang="en" className="sidebar">
+      <body className={`${outfit.variable} ${inter.variable} antialiased  `}>
         <Header />
         {children}
         <Partners />

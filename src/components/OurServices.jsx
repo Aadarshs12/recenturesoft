@@ -60,7 +60,7 @@ const OurServices = () => {
               spaceBetween={20}
               loop={true}
               autoplay={{
-                delay: 3000,
+                delay: 5000,
                 disableOnInteraction: true,
               }}
               pagination={false}
@@ -88,10 +88,6 @@ const OurServices = () => {
               {[...services, ...services, ...services].map((service, index) => (
                 <SwiperSlide key={index}>
                   <div
-                    style={{
-                      backgroundImage: `repeating-radial-gradient(circle at center center, transparent 0px, transparent 2px,rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 3px,transparent 3px, transparent 5px,rgba(0,0,0,0.03) 5px, rgba(0,0,0,0.03) 7px),repeating-radial-gradient(circle at center center, rgb(235,247,255) 0px, rgb(235,247,255) 9px,rgb(235,247,255) 9px, rgb(235,247,255) 21px,rgb(235,247,255) 21px, rgb(235,247,255) 31px,rgb(235,247,255) 31px, rgb(235,247,255) 40px)`,
-                      backgroundSize: `20px 20px`,
-                    }}
                     className="forServicesCard shadow-2xs flex flex-col gap-2 p-5 rounded-2xl h-full"
                   >
                     <div className="forServiceImg flex lg:flex-row flex-col items-start lg:items-center gap-2">

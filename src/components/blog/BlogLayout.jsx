@@ -153,12 +153,12 @@ const BlogLayout = () => {
               <h2 className="font-semibold text-xl primary-color mb-2 w-fit">
                 Tags
               </h2>
-              <ul className="flex flex-wrap gap-3">
+              <ul className="flex flex-wrap gap-2">
                 {tags.map((item, index) => {
                   return (
                     <li
                       key={index}
-                      className="bg-white text-[#2181c2] hover:bg-slate-50 cursor-pointer px-2 py-1 rounded-md shadow text-sm "
+                      className="bg-white text-[#2181c2] hover:bg-slate-50 cursor-pointer px-2 py-1 rounded-md shadow text-sm"
                     >
                       <Link href="#">{item?.tag}</Link>
                     </li>
