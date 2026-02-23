@@ -1264,3 +1264,19 @@ header {
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 }
+
+.forSidebar {
+  .accordion-item[data-state="open"] .accordion-trigger-primary {
+    color: #2181c2;
+  }
+}
+
+.forPhotoGrid {
+  background-color: #f2f2f2;
+  button.ring-offset-background.focus\:ring-ring.data-\[state\=open\]\:bg-accent.data-\[state\=open\]\:text-muted-foreground.absolute.top-4.right-4.rounded-xs.opacity-70.transition-opacity.hover\:opacity-100.focus\:ring-2.focus\:ring-offset-2.focus\:outline-hidden.disabled\:pointer-events-none.\[\&_svg\]\:pointer-events-none.\[\&_svg\]\:shrink-0.\[\&_svg\:not\(\[class\*\=\'size-\'\]\)\]\:size-4 {
+    display: none;
+  }
+  svg.lucide.lucide-x.h-6.w-6 {
+    cursor: pointer;
+  }
+}
