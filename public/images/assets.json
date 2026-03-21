@@ -1,0 +1,80 @@
+{
+  "years": [2026, 2025, 2024, 2023],
+  "events": [
+    {
+      "id": "2026-christmas-01",
+      "year": 2026,
+      "category": "christmas",
+      "title": "Christmas Celebration 2026",
+      "date": "2026-12-24",
+      "description": "Office decoration, Secret Santa, cake cutting & party",
+      "images": [
+        "https://images.unsplash.com/photo-1543589078-...christmas1.jpg",
+        "https://images.unsplash.com/photo-...christmas2.jpg",
+        "https://your-cdn.com/office/christmas-2026/team-photo.jpg"
+      ],
+      "highlight": true
+    },
+    {
+      "id": "2026-eom-jan",
+      "year": 2026,
+      "category": "employee-of-the-month",
+      "title": "Employee of the Month - January 2026",
+      "date": "2026-02-01",
+      "employee": {
+        "name": "Priya Singh",
+        "department": "Marketing",
+        "quote": "Outstanding campaign results!"
+      },
+      "images": [
+        "https://your-cdn.com/eom/priya-jan-2026.jpg",
+        "https://your-cdn.com/eom/certificate.jpg"
+      ]
+    },
+    {
+      "id": "2025-independence-day",
+      "year": 2025,
+      "category": "independence-day",
+      "title": "Independence Day 2025",
+      "date": "2025-08-15",
+      "description": "Flag hoisting, cultural program & patriotic songs",
+      "images": [
+        "https://...flag-hoisting.jpg",
+        "https://...group-photo-2025.jpg"
+      ]
+    },
+    {
+      "id": "2026-holi",
+      "year": 2026,
+      "category": "holi",
+      "title": "Holi Celebration",
+      "date": "2026-03-04",
+      "images": ["https://...holi-colors.jpg", "https://...dance.jpg"]
+    }
+  ],
+  "categories": [
+    {
+      "slug": "employee-of-the-month",
+      "name": "Employee of the Month",
+      "icon": "trophy"  
+    },
+    {
+      "slug": "christmas",
+      "name": "Christmas",
+      "icon": "tree"
+    },
+    {
+      "slug": "independence-day",
+      "name": "Independence Day"
+    },
+    {
+      "slug": "holi",
+      "name": "Holi"
+    },
+    {
+      "slug": "diwali",
+      "name": "Diwali"
+    }
+  ],
+  "last_updated": "2026-02-25"
+}

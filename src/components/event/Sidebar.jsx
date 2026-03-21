@@ -49,30 +49,25 @@ export default function Sidebar() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="flex flex-col gap-4 text-balance">
-                    <ul className="ml-3 flex flex-col gap-3">
-                      <li className="flex gap-2 items-center text-md border border-[#535353] rounded-md border-r-6 text-black py-2 px-4 ">
+                    <ul className="ml-3 flex flex-col gap-1">
+                      <li className="flex gap-2 items-center text-[12px] border border-[#535353] rounded-md border-r-6 text-black py-1 px-4 ">
                         {" "}
-                        <PartyPopper size={16} />
                         Holi
                       </li>
-                      <li className="flex gap-2 items-center text-md border border-[#535353] rounded-md border-r-6 text-black py-2 px-4 ">
+                      <li className="flex gap-2 items-center text-[12px] border border-[#535353] rounded-md border-r-6 text-black py-1 px-4 ">
                         {" "}
-                        <PartyPopper size={16} />
                         Diwali
                       </li>
-                      <li className="flex gap-2 items-center text-md border border-[#535353] rounded-md border-r-6 text-black py-2 px-4 ">
+                      <li className="flex gap-2 items-center text-[12px] border border-[#535353] rounded-md border-r-6 text-black py-1 px-4 ">
                         {" "}
-                        <PartyPopper size={16} />
                         Independanceday
                       </li>
-                      <li className="flex gap-2 items-center text-md border border-[#535353] rounded-md border-r-6 text-black py-2 px-4 ">
+                      <li className="flex gap-2 items-center text-[12px] border border-[#535353] rounded-md border-r-6 text-black py-1 px-4 ">
                         {" "}
-                        <PartyPopper size={16} />
                         Employee of the month
                       </li>
-                      <li className="flex gap-2 items-center text-md border border-[#535353] rounded-md border-r-6 text-black py-2 px-4 ">
+                      <li className="flex gap-2 items-center text-[12px] border border-[#535353] rounded-md border-r-6 text-black py-1 px-4 ">
                         {" "}
-                        <PartyPopper size={16} />
                         Cristmas
                       </li>
                     </ul>
@@ -87,30 +82,25 @@ export default function Sidebar() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="flex flex-col gap-4 text-balance">
-                    <ul className="ml-3 flex flex-col gap-3">
-                      <li className="flex gap-2 items-center text-md border border-[#535353] rounded-md border-r-6 text-black py-2 px-4 ">
+                    <ul className="ml-3 flex flex-col gap-1">
+                      <li className="flex gap-2 items-center text-[12px] border border-[#535353] rounded-md border-r-6 text-black py-1 px-4 ">
                         {" "}
-                        <PartyPopper size={16} />
                         Holi
                       </li>
-                      <li className="flex gap-2 items-center text-md border border-[#535353] rounded-md border-r-6 text-black py-2 px-4 ">
+                      <li className="flex gap-2 items-center text-[12px] border border-[#535353] rounded-md border-r-6 text-black py-1 px-4 ">
                         {" "}
-                        <PartyPopper size={16} />
                         Diwali
                       </li>
-                      <li className="flex gap-2 items-center text-md border border-[#535353] rounded-md border-r-6 text-black py-2 px-4 ">
+                      <li className="flex gap-2 items-center text-[12px] border border-[#535353] rounded-md border-r-6 text-black py-1 px-4 ">
                         {" "}
-                        <PartyPopper size={16} />
                         Independanceday
                       </li>
-                      <li className="flex gap-2 items-center text-md border border-[#535353] rounded-md border-r-6 text-black py-2 px-4 ">
+                      <li className="flex gap-2 items-center text-[12px] border border-[#535353] rounded-md border-r-6 text-black py-1 px-4 ">
                         {" "}
-                        <PartyPopper size={16} />
                         Employee of the month
                       </li>
-                      <li className="flex gap-2 items-center text-md border border-[#535353] rounded-md border-r-6 text-black py-2 px-4 ">
+                      <li className="flex gap-2 items-center text-[12px] border border-[#535353] rounded-md border-r-6 text-black py-1 px-4 ">
                         {" "}
-                        <PartyPopper size={16} />
                         Cristmas
                       </li>
                     </ul>
@@ -125,30 +115,25 @@ export default function Sidebar() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="flex flex-col gap-4 text-balance">
-                    <ul className="ml-3 flex flex-col gap-3">
-                      <li className="flex gap-2 items-center text-md border border-[#535353] rounded-md border-r-6 text-black py-2 px-4 ">
+                    <ul className="ml-3 flex flex-col gap-1">
+                      <li className="flex gap-2 items-center text-[12px] border border-[#535353] rounded-md border-r-6 text-black py-1 px-4 ">
                         {" "}
-                        <PartyPopper size={16} />
                         Holi
                       </li>
-                      <li className="flex gap-2 items-center text-md border border-[#535353] rounded-md border-r-6 text-black py-2 px-4 ">
+                      <li className="flex gap-2 items-center text-[12px] border border-[#535353] rounded-md border-r-6 text-black py-1 px-4 ">
                         {" "}
-                        <PartyPopper size={16} />
                         Diwali
                       </li>
-                      <li className="flex gap-2 items-center text-md border border-[#535353] rounded-md border-r-6 text-black py-2 px-4 ">
+                      <li className="flex gap-2 items-center text-[12px] border border-[#535353] rounded-md border-r-6 text-black py-1 px-4 ">
                         {" "}
-                        <PartyPopper size={16} />
                         Independanceday
                       </li>
-                      <li className="flex gap-2 items-center text-md border border-[#535353] rounded-md border-r-6 text-black py-2 px-4 ">
+                      <li className="flex gap-2 items-center text-[12px] border border-[#535353] rounded-md border-r-6 text-black py-1 px-4 ">
                         {" "}
-                        <PartyPopper size={16} />
                         Employee of the month
                       </li>
-                      <li className="flex gap-2 items-center text-md border border-[#535353] rounded-md border-r-6 text-black py-2 px-4 ">
+                      <li className="flex gap-2 items-center text-[12px] border border-[#535353] rounded-md border-r-6 text-black py-1 px-4 ">
                         {" "}
-                        <PartyPopper size={16} />
                         Cristmas
                       </li>
                     </ul>
